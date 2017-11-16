@@ -5,7 +5,6 @@ cache:
   directories:
     - node_modules
 before_script:
-  - npm install -g codeclimate-test-reporter
   - export CODECLIMATE_REPO_TOKEN=565456ecd1d8fa17aba17bf9f9a9c97e183470c2f2c2b3e9aa67b477c6d1e201
 script:
   - npm run build
