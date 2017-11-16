@@ -13,8 +13,7 @@
   "dependencies": {
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
-    "react-scripts": "1.0.17",
-    "coveralls": "^3.0.0"
+    "react-scripts": "1.0.17"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -24,6 +23,7 @@
     "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls"
   },
   "devDependencies": {
+    "coveralls": "^3.0.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-node": "^5.2.1",
