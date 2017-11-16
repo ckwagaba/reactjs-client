@@ -20,7 +20,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test  --env=jsdom --coverage",
     "eject": "react-scripts eject",
-    "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls"
+    "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls",
+    "codeclimate": "codeclimate-test-reporter < ./coverage/lcov.info"
   },
   "devDependencies": {
     "coveralls": "^3.0.0",
