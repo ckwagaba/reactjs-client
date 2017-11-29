@@ -37,6 +37,7 @@
     "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-standard": "^3.0.1",
     "selenium-standalone": "^6.11.0",
+    "wdio-mocha-framework": "^0.5.11",
     "webdriverio": "^4.9.10"
   }
 }
