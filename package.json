@@ -26,7 +26,11 @@
     "test": "react-scripts test  --env=jsdom --coverage",
     "eject": "react-scripts eject",
     "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls",
-    "codeclimate": "codeclimate-test-reporter < ./coverage/lcov.info"
+    "codeclimate": "codeclimate-test-reporter < ./coverage/lcov.info",
+    "selenium-setup": "selenium-standalone install",
+    "selenium-start": "selenium-standalone start",
+    "e2e-tests": "wdio wdio.conf.js",
+    "e2e-tests-watch": "wdio wdio.conf.js --watch"
   },
   "devDependencies": {
     "chai": "^4.1.2",
