@@ -5,6 +5,7 @@
       "src/**/*.{js,jsx}",
       "!src/registerServiceWorker.js",
       "!src/index.js",
+      "!src/setupTests.js",
       "!src/e2e_tests/**",
       "!<rootDir>/node_modules/"
     ]
