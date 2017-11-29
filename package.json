@@ -5,6 +5,8 @@
       "src/**/*.{js,jsx}",
       "!src/registerServiceWorker.js",
       "!src/index.js",
+      "!src/setupTests.js",
+      "!src/e2e_tests/**",
       "!<rootDir>/node_modules/"
     ]
   },
@@ -12,9 +14,13 @@
   "private": true,
   "dependencies": {
     "codeclimate-test-reporter": "^0.5.0",
+    "enzyme": "^3.2.0",
+    "enzyme-adapter-react-16": "^1.1.0",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
-    "react-scripts": "1.0.17"
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.0.17",
+    "react-test-renderer": "^16.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -22,14 +28,22 @@
     "test": "react-scripts test  --env=jsdom --coverage",
     "eject": "react-scripts eject",
     "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls",
-    "codeclimate": "codeclimate-test-reporter < ./coverage/lcov.info"
+    "codeclimate": "codeclimate-test-reporter < ./coverage/lcov.info",
+    "selenium-setup": "selenium-standalone install",
+    "selenium-start": "selenium-standalone start",
+    "e2e-tests": "wdio wdio.conf.js",
+    "e2e-tests-watch": "wdio wdio.conf.js --watch"
   },
   "devDependencies": {
+    "chai": "^4.1.2",
     "coveralls": "^3.0.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-node": "^5.2.1",
     "eslint-plugin-promise": "^3.6.0",
-    "eslint-plugin-standard": "^3.0.1"
+    "eslint-plugin-standard": "^3.0.1",
+    "selenium-standalone": "^6.11.0",
+    "wdio-mocha-framework": "^0.5.11",
+    "webdriverio": "^4.9.10"
   }
 }
