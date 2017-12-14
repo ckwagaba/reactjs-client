@@ -1,13 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
+import TextInput from './text_input';
+import SubmitButton from './submit_button';
+import PasswordInput from './password_input';
 
-class Register extends Component {
-  render () {
-    return (
-      <div>
-        <input className="email_field" />
-      </div>
-    );
-  }
+const Register = () => {
+  return (
+    <div>
+      <TextInput />
+      <PasswordInput />
+      <SubmitButton />
+    </div>
+  );
 }
 
 export default Register;
