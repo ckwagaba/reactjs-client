@@ -8,6 +8,7 @@ const Register = () => {
     <div>
       <TextInput />
       <PasswordInput />
+      <PasswordInput />
       <SubmitButton />
     </div>
   );

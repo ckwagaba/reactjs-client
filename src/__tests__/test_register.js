@@ -14,8 +14,8 @@ describe('Register component', () => {
     expect(component.find('TextInput').length).toEqual(1);
   });
 
-  it('should have a password field', () => {
-    expect(component.find('PasswordInput').length).toEqual(1);
+  it('should have two password fields', () => {
+    expect(component.find('PasswordInput').length).toEqual(2);
   });
 
   it('should have a submit button', () => {
