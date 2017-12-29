@@ -1,5 +1,6 @@
 import React from 'react';
 import PagePurpose from './page_purpose';
+import ServerResponse from './server_response';
 import AppDetails from './app_details';
 import EmailInput from './email_input';
 import SubmitButton from './submit_button';
@@ -12,6 +13,7 @@ const RegisterView = () => {
       <AppDetails />
       <div className="form_section">
         <PagePurpose purpose="Create your account" />
+        <ServerResponse />
         <form>
           <EmailInput placeholder="Email Address" />
           <PasswordInput placeholder="New Password" />

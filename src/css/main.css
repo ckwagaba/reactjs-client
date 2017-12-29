@@ -85,6 +85,11 @@ input[type="submit"]:hover {
   padding: 3rem 0;
 }
 
+.server_response {
+  padding: 1rem 0;
+  color: #F00;
+}
+
 .text_input {
 	text-align: center;
 }
