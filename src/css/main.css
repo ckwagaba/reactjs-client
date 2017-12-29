@@ -1,0 +1,105 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+a {
+  color: #DA1C5C;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+input{
+	-webkit-appearance: none;
+	font-family: inherit;
+}
+
+input[type="text"], input[type="email"], input[type="password"]{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 20rem;
+	border: 2px solid #CCC;
+	background: #FAFAFA;
+	padding: 1rem;
+  margin: .3rem 0;
+	vertical-align: middle;
+	font-size: 1rem;
+}
+
+input[type="submit"] {
+  display:inline-block;
+	padding: 1rem 2rem;
+  background: #DA1C5C;
+  color: #FFF;
+  border: 1px solid #DA1C5C;
+  font-size: 1rem;
+  margin: 2rem 0;
+}
+
+input[type="submit"]:hover {
+  background: none;
+  color: #DA1C5C;
+}
+
+.landing_page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app_details {
+  display: flex;
+  padding: 3rem;
+  align-items: center;
+  background: #DA1C5C;
+  color: #FFF;
+}
+
+.app_name {
+  text-transform: uppercase;
+  flex: 1;
+  font-size: 2rem;
+}
+
+.app_description {
+  flex: 2;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.form_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+}
+
+.page_purpose {
+  padding: 3rem 0;
+}
+
+.text_input {
+	text-align: center;
+}
+
+.email_input {
+
+}
+
+.password_input {
+
+}
+
+.submit_button {
+
+}
+
+.alt_option {
+  padding: 3rem;
+}
