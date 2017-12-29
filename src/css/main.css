@@ -23,7 +23,7 @@ input[type="text"], input[type="email"], input[type="password"]{
 	box-sizing: border-box;
 	width: 20rem;
 	border: 2px solid #CCC;
-	background: #FAFAFA;
+	background: #FFF;
 	padding: 1rem;
   margin: .3rem 0;
 	vertical-align: middle;
@@ -49,6 +49,7 @@ input[type="submit"]:hover {
   height: 100vh;
   display: flex;
   flex-direction: column;
+  background: #FAFAFA;
 }
 
 .app_details {
