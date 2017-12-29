@@ -4,7 +4,7 @@ class PasswordInput extends Component {
   render () {
     return (
       <div>
-        <input className="password_field" />
+        <input className="password_input" />
       </div>
     );
   }

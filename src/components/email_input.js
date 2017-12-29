@@ -4,7 +4,7 @@ class TextInput extends Component {
   render () {
     return (
       <div>
-        <input className="email_field" />
+        <input className="email_input" />
       </div>
     );
   }
