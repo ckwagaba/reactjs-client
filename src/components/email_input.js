@@ -4,7 +4,7 @@ class TextInput extends Component {
   render () {
     return (
       <div>
-        <input className="email_input" />
+        <input type="email" className="text_input email_input" placeholder={this.props.placeholder} />
       </div>
     );
   }

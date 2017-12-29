@@ -1,13 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import Register from './components/register';
+import './css/main.css';
+import RegisterView from './components/register_view';
+//import LoginView from './components/login_view';
 import registerServiceWorker from './registerServiceWorker';
 
 const App = () => {
   return (
     <div>
-      <Register />
+      <RegisterView />
     </div>
   );
 }

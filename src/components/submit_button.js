@@ -4,7 +4,7 @@ class SubmitButton extends Component {
   render () {
     return (
       <div>
-        <button className="submit_button" />
+        <input type="submit" className="submit_button" value={this.props.buttonText} />
       </div>
     );
   }

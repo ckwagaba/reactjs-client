@@ -4,7 +4,7 @@ class PasswordInput extends Component {
   render () {
     return (
       <div>
-        <input className="password_input" />
+        <input type="password" className="text_input password_input" placeholder={this.props.placeholder} />
       </div>
     );
   }
