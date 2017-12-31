@@ -19,7 +19,7 @@ const LoginView = () => {
           <PasswordInput placeholder="Enter Password" />
           <SubmitButton buttonText="Sign In" />
         </form>
-        <AltOption altOptionLink="#" altOptionText="Sign Up" />
+        <AltOption altOptionLink="/auth/register" altOptionText="Sign Up" />
       </div>
     </div>
   );
