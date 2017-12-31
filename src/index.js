@@ -1,23 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
-import './css/main.css';
-import RegisterView from './components/register_view';
-import LoginView from './components/login_view';
+import { BrowserRouter } from 'react-router-dom';
 import registerServiceWorker from './registerServiceWorker';
+import App from './components/app';
 
-class App extends Component {
-  state = {
-    loggedIn: false
-  }
-
-  render () {
-    return (
-      <div>
-        {this.state.loggedIn ? <RegisterView /> : <LoginView />}
-      </div>
-    );
-  }
-}
-
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+  (
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  ), document.getElementById('root')
+);
 registerServiceWorker();
