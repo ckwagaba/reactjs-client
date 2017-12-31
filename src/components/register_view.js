@@ -20,7 +20,7 @@ const RegisterView = () => {
           <PasswordInput placeholder="Confirm Password" />
           <SubmitButton buttonText="Sign Up" />
         </form>
-        <AltOption altOptionLink="#" altOptionText="Sign In" />
+        <AltOption altOptionLink="/auth/login" altOptionText="Sign In" />
       </div>
     </div>
   );
