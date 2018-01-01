@@ -5,8 +5,8 @@ const Nav = (props) => {
     <nav>
       <div className="nav_links">
         <ul className="menu">
-          <li><a href="">Lists</a></li>
-          <li><a href="">Goals</a></li>
+          <li><a href="/bucketlists/">Lists</a></li>
+          <li><a href="/items/">Goals</a></li>
           <li><a href="">Achievements</a></li>
         </ul>
       </div>
