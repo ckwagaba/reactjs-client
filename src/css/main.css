@@ -143,7 +143,7 @@ nav {
   padding: 1rem;
 }
 
-.header {
+header {
   display: flex;
   padding: 2rem;
   align-items: center;
@@ -187,4 +187,57 @@ nav {
   flex: 2;
   display: flex;
   justify-content: flex-end;
+}
+
+main {
+  padding: 1rem 1rem 0 1rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.bucketlist {
+  width: calc(100% / 5 - 1rem);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #CCC;
+  margin: 0 .2rem 1rem;
+}
+
+.bucketlist_thumbnail {
+  background: #E1E1E1;
+  border-bottom: 1px solid #CCC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1rem;
+}
+
+.bucketlist_actions {
+  background: #EFEFEF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  color: #FFF;
+  font-size: .9rem;
+}
+
+button:hover {
+  color: #000;
+  background: none;
+}
+
+.edit_button {
+  background: #FFBA5C;
+  border: 1px solid #F5732B;
+}
+
+.delete_button {
+  background: #F95F62;
+  border: 1px solid #AC1B1E;
 }
