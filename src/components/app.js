@@ -8,7 +8,7 @@ import ItemView from './item_view';
 
 class App extends Component {
   state = {
-    loggedIn: false
+    loggedIn: true
   }
 
   render () {
