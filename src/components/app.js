@@ -20,6 +20,7 @@ class App extends Component {
             <Route exact path='/' component={BucketlistView} />
             <Route path='/bucketlists/' component={BucketlistView} />
             <Route path='/bucketlists/:bucketlist_id' component={BucketlistView} />
+            <Route path='/items/' component={ItemView} />
             <Route path='/bucketlists/:bucketlist_id/items/' component={ItemView} />
             <Route path='/bucketlists/:bucketlist_id/items/:item_id' component={ItemView} />
           </Switch> :
