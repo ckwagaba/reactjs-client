@@ -109,3 +109,36 @@ input[type="submit"]:hover {
 .alt_option {
   padding: 3rem;
 }
+
+nav {
+  display: flex;
+  padding: 2rem;
+  align-items: center;
+  background: #DA1C5C;
+  color: #FFF;
+}
+
+.nav_links {
+  flex: 2;
+}
+
+.nav_options {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.menu a {
+  color: #FFF;
+}
+
+.menu li {
+  float: left;
+  padding: 1rem;
+}
