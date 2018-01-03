@@ -190,7 +190,7 @@ header {
 }
 
 main {
-  padding: 1rem 1rem 0 1rem;
+  padding: 2rem 2rem 0 2rem;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -249,7 +249,7 @@ button:hover {
 }
 
 .item_table thead {
-  background: #969FAA;
+  background: #CCC;
   color: #FFF;
 }
 
@@ -259,11 +259,11 @@ button:hover {
 }
 
 .item_table tbody tr:nth-child(odd) {
-  background: #F4F8FC;
+  background: #EFEFEF;
 }
 
 .item_table tbody tr:nth-child(even) {
-  background: #E5E9F2;
+  background: #E5E5E5;
 }
 
 .item_table td {
