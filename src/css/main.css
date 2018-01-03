@@ -207,7 +207,6 @@ main {
 .bucketlist_thumbnail {
   color: #000;
   text-decoration: none;
-  cursor: default;
   background: #E1E1E1;
   border-bottom: 1px solid #CCC;
   display: flex;
@@ -269,6 +268,10 @@ button:hover {
 
 .item:nth-child(even) {
   background: #E5E5E5;
+}
+
+.item:hover {
+  background: #CCC;
 }
 
 .item_name {
