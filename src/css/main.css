@@ -249,7 +249,7 @@ button:hover {
 }
 
 .item {
-  width: 100%;
+  width: 80%;
   display: flex;
   align-items: center;
 }
@@ -271,7 +271,7 @@ button:hover {
 }
 
 .item:hover {
-  background: #CCC;
+  background: #FFF;
 }
 
 .item_name {
