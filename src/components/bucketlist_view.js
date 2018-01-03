@@ -19,12 +19,12 @@ const BucketlistView = () => {
   const rows = listToRender.map((item) =>
     <Bucketlist key={item.name} bucketlistName={item.name} />
   );
-  
+
   return (
     <div className="landing_page bucketlist_view">
       <Nav />
       <Header currentLocation="Bucketlist" />
-      <Main listToRender={rows} />
+      <Main componentToRender={rows} />
     </div>
   );
 }

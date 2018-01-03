@@ -37,7 +37,7 @@ const ItemView = () => {
     <div className="landing_page item_view">
       <Nav />
       <Header currentLocation="Item" />
-      <Main listToRender={itemTable} />
+      <Main componentToRender={itemTable} />
     </div>
   );
 }

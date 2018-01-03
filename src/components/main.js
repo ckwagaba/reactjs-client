@@ -4,7 +4,7 @@ class Main extends Component {
   render () {
     return (
       <main>
-        {this.props.listToRender}
+        {this.props.componentToRender}
       </main>
     );
   }
