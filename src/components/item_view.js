@@ -20,24 +20,11 @@ const ItemView = () => {
     <Item key={item.name} itemName={item.name} itemBucket={item.bucketlist} />
   );
 
-  const itemTable = <table className="item_table">
-    <thead>
-      <tr>
-        <th>Description</th>
-        <th>Bucket</th>
-        <th>Action</th>
-      </tr>
-    </thead>
-    <tbody>
-      {rows}
-    </tbody>
-  </table>
-
   return (
     <div className="landing_page item_view">
       <Nav />
       <Header currentLocation="Item" />
-      <Main componentToRender={itemTable} />
+      <Main componentToRender={rows} />
     </div>
   );
 }
