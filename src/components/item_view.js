@@ -5,13 +5,10 @@ import Main from './main';
 import Item from './item';
 
 const itemsToRender = [
-  {name: 'Finish my checkpoints this week.', bucketlist: 'Career'},
   {name: 'Track ten learning outcomes.', bucketlist: 'Career'},
   {name: 'Buy football a kit.', bucketlist: 'Lifestyle'},
   {name: 'Play guitar with more confidence.', bucketlist: 'Music'},
   {name: 'Buy a Fender stratocaster.', bucketlist: 'Music'},
-  {name: 'Read the Bible atleast once a week.', bucketlist: 'Spiritual'},
-  {name: 'Pay all debts by March.', bucketlist: 'Business'},
   {name: 'Learn to love.', bucketlist: 'Relationship'}
 ]
 
