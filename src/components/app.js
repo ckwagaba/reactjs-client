@@ -7,8 +7,8 @@ import BucketlistView from './bucketlist_view';
 import ItemView from './item_view';
 
 class App extends Component {
-  constructor (props) {
-    super(props);
+  constructor () {
+    super();
     this.state = {
       accessToken: ''
     }
