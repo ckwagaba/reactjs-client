@@ -27,7 +27,6 @@ class App extends Component {
         </Switch>
       );
     }
-
     else {
       return (
         <Switch>
