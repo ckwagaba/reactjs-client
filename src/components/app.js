@@ -10,8 +10,60 @@ class App extends Component {
   constructor () {
     super();
     this.state = {
-      accessToken: ''
+      email: '',
+      password: '',
+      accessToken: '',
+      APIResponse: ''
     }
+  }
+
+  // handle form submission
+  submitForm = (event, endpoint) => {
+    event.preventDefault();
+    const requestData = {
+      'email': this.state.email,
+      'password': this.state.password
+    }
+    const BASEURL = 'http://127.0.0.1:5000/v1';
+    fetch(BASEURL + endpoint, {
+      method: 'POST',
+      body: JSON.stringify(requestData),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+    .then(response => {
+      return response.json()
+    })
+    .then(responseData => {
+      // store access token for global use
+      if(responseData.access_token){
+        console.log(responseData.access_token);
+      }
+      this.setState(
+        {
+          APIResponse: responseData.message
+        }
+      );
+    });
+  }
+
+  // set the email address
+  handleEmailChange = (event) => {
+    this.setState(
+      {
+        email: event.target.value
+      }
+    );
+  }
+
+  // set the password
+  handlePasswordChange = (event) => {
+    this.setState(
+      {
+        password: event.target.value
+      }
+    );
   }
 
   render () {
@@ -30,9 +82,36 @@ class App extends Component {
     else {
       return (
         <Switch>
-          <Route exact path='/' component={RegisterView} />
-          <Route path='/auth/register' component={RegisterView} />
-          <Route path='/auth/login' component={LoginView} />
+          <Route exact path='/' render={(props) => (
+            <RegisterView
+              APIResponse={this.state.APIResponse}
+              submitForm={(event) => this.submitForm(event, '/auth/register')}
+              email={this.state.email}
+              password={this.state.password}
+              handleEmailChange={this.handleEmailChange}
+              handlePasswordChange={this.handlePasswordChange}
+            />
+          )} />
+          <Route path='/auth/register' render={(props) => (
+            <RegisterView
+              APIResponse={this.state.APIResponse}
+              submitForm={(event) => this.submitForm(event, '/auth/register')}
+              email={this.state.email}
+              password={this.state.password}
+              handleEmailChange={this.handleEmailChange}
+              handlePasswordChange={this.handlePasswordChange}
+            />
+          )} />
+          <Route path='/auth/login' render={(props) => (
+            <LoginView
+              APIResponse={this.state.APIResponse}
+              submitForm={(event) => this.submitForm(event, '/auth/login')}
+              email={this.state.email}
+              password={this.state.password}
+              handleEmailChange={this.handleEmailChange}
+              handlePasswordChange={this.handlePasswordChange}
+            />
+          )} />
         </Switch>
       );
     }
