@@ -1,12 +1,13 @@
 import React from 'react';
 import Button from './button';
+import { Link } from 'react-router-dom';
 
 const Bucketlist = (props) => {
   return (
     <div className="bucketlist">
-      <a href={"/bucketlists/" + props.bucketlistId} className="bucketlist_thumbnail">
+      <Link to={"/bucketlists/" + props.bucketlistId} className="bucketlist_thumbnail">
         {props.bucketlistName}
-      </a>
+      </Link>
       <div className="bucketlist_actions">
         <Button buttonText="Edit" className="edit_button" />
         <Button buttonText="Delete" className="delete_button" />

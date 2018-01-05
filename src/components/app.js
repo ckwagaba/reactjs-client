@@ -39,6 +39,11 @@ class App extends Component {
       // store access token for global use
       if(responseData.access_token){
         console.log(responseData.access_token);
+        this.setState(
+          {
+            accessToken: responseData.access_token
+          }
+        );
       }
       this.setState(
         {
@@ -70,6 +75,7 @@ class App extends Component {
     if (this.state.accessToken) {
       return (
         <Switch>
+          <Route path='/auth/login' component={BucketlistView} />
           <Route exact path='/' component={BucketlistView} />
           <Route path='/bucketlists/' component={BucketlistView} />
           <Route path='/bucketlists/:bucketlist_id' component={BucketlistView} />

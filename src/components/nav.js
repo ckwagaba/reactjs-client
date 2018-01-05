@@ -1,19 +1,20 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Nav = (props) => {
   return (
     <nav>
       <div className="nav_links">
         <ul className="menu">
-          <li><a href="/bucketlists/">Lists</a></li>
-          <li><a href="/items/">Goals</a></li>
-          <li><a href="">Achievements</a></li>
+          <li><Link to="/bucketlists/">Lists</Link></li>
+          <li><Link to="/items/">Goals</Link></li>
+          <li><Link to="">Achievements</Link></li>
         </ul>
       </div>
       <div className="nav_options">
         <ul className="menu">
           <li>{props.userName}</li>
-          <li><a href="">Logout</a></li>
+          <li><Link to="">Logout</Link></li>
         </ul>
       </div>
     </nav>
