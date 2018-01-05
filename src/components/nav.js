@@ -14,7 +14,7 @@ const Nav = (props) => {
       <div className="nav_options">
         <ul className="menu">
           <li>{props.userName}</li>
-          <li><Link to="">Logout</Link></li>
+          <li><Link to="/auth/login" onClick={props.handleLogout}>Logout</Link></li>
         </ul>
       </div>
     </nav>

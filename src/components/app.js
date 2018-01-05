@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 import '../css/main.css';
 import RegisterView from './register_view';
 import LoginView from './login_view';
@@ -12,7 +12,7 @@ class App extends Component {
     this.state = {
       email: '',
       password: '',
-      accessToken: '',
+      ACCESSTOKEN: '',
       APIResponse: ''
     }
   }
@@ -36,14 +36,15 @@ class App extends Component {
       return response.json()
     })
     .then(responseData => {
-      // store access token for global use
+      // on successful login
       if(responseData.access_token){
-        console.log(responseData.access_token);
+        // store access_token for use in other endpoints
         this.setState(
           {
-            accessToken: responseData.access_token
+            ACCESSTOKEN: responseData.access_token
           }
         );
+        // redirect to BucketlistView
       }
       this.setState(
         {
@@ -71,20 +72,45 @@ class App extends Component {
     );
   }
 
+  // handle logout
+  handleLogout = (event) => {
+    // reset access_token
+    this.setState(
+      {
+        ACCESSTOKEN: '',
+        'email': '',
+        'password': '',
+        'APIResponse': ''
+      }
+    );
+    // redirect to LoginView
+  }
+
   render () {
-    if (this.state.accessToken) {
+    // logged in
+    if (this.state.ACCESSTOKEN) {
       return (
         <Switch>
-          <Route path='/auth/login' component={BucketlistView} />
-          <Route exact path='/' component={BucketlistView} />
-          <Route path='/bucketlists/' component={BucketlistView} />
-          <Route path='/bucketlists/:bucketlist_id' component={BucketlistView} />
-          <Route path='/items/' component={ItemView} />
-          <Route path='/bucketlists/:bucketlist_id/items/' component={ItemView} />
-          <Route path='/bucketlists/:bucketlist_id/items/:item_id' component={ItemView} />
+          <Route path='/bucketlists/' render={() => (
+            <BucketlistView handleLogout={this.handleLogout} />
+          )} />
+          <Route path='/bucketlists/:bucketlist_id' render={() => (
+            <BucketlistView handleLogout={this.handleLogout} />
+          )} />
+          <Route path='/items/' render={() => (
+            <ItemView handleLogout={this.handleLogout} />
+          )} />
+          <Route path='/bucketlists/:bucketlist_id/items/' render={() => (
+            <ItemView handleLogout={this.handleLogout} />
+          )} />
+          <Route path='/bucketlists/:bucketlist_id/items/:item_id' render={() => (
+            <ItemView handleLogout={this.handleLogout} />
+          )} />
+          <Redirect to="/bucketlists/" />
         </Switch>
       );
     }
+    // logged out
     else {
       return (
         <Switch>

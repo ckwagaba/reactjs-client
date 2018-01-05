@@ -12,14 +12,14 @@ const itemsToRender = [
   {name: 'Learn to love.', bucketlist: 'Relationship'}
 ]
 
-const ItemView = () => {
+const ItemView = (props) => {
   const rows = itemsToRender.map((item) =>
     <Item key={item.name} itemName={item.name} itemBucket={item.bucketlist} />
   );
 
   return (
     <div className="landing_page item_view">
-      <Nav />
+      <Nav handleLogout={props.handleLogout} />
       <Header currentLocation="Item" />
       <Main componentToRender={rows} />
     </div>
