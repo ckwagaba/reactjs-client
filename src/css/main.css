@@ -156,13 +156,10 @@ header {
   align-items: center;
 }
 
-.create_button {
+.round_button {
   width: 3rem;
   height: 3rem;
   cursor: default;
-  margin-right: 1rem;
-  border: 2px solid #DA1C5C;
-  background: #DA1C5C;
   color: #FFF;
   border-radius: 100%;
   display: inline-flex;
@@ -174,13 +171,32 @@ header {
 	-o-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
 }
 
-.create_button:hover {
+.create_button {
+  border: 2px solid #DA1C5C;
+  background: #DA1C5C;
+  margin-right: 1rem;
+}
+
+.cancel_button {
+  border: 2px solid #F00;
+  background: #F00;
+  transform: rotate(45deg);
+}
+
+.round_button:hover {
   background: none;
-  color: #DA1C5C;
   box-shadow: none;
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
   -o-box-shadow: none;
+}
+
+.create_button:hover {
+  color: #DA1C5C;
+}
+
+.cancel_button:hover {
+  color: #F00;
 }
 
 .search {
@@ -194,6 +210,17 @@ main {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+.entry_form {
+  flex: 1;
+  align-items: center;
+}
+
+.entry_form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .bucketlist {
