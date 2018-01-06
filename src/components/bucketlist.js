@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Bucketlist = (props) => {
   return (
     <div className="bucketlist">
-      <Link to={"/bucketlists/" + props.bucketlistId} className="bucketlist_thumbnail">
+      <Link to={"/bucketlists/" + props.bucketlistId + "/items/"} className="bucketlist_thumbnail">
         {props.bucketlistName}
       </Link>
       <div className="bucketlist_actions">

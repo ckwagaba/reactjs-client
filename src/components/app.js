@@ -5,6 +5,7 @@ import RegisterView from './register_view';
 import LoginView from './login_view';
 import BucketlistView from './bucketlist_view';
 import ItemView from './item_view';
+import BucketlistForm from './bucketlist_form';
 
 class App extends Component {
   constructor () {
@@ -14,7 +15,8 @@ class App extends Component {
       password: '',
       ACCESSTOKEN: '',
       APIResponse: '',
-      listToRender: []
+      listToRender: [],
+      name: ''
     }
   }
 
@@ -46,23 +48,9 @@ class App extends Component {
           }
         );
         // redirect to BucketlistView
-        // fetch user's data
-        fetch(BASEURL + '/bucketlists/', {
-          method: 'GET',
-          headers: {
-            'Content-Type': 'application/json',
-            'Authorization': this.state.ACCESSTOKEN
-          }
-        })
-        .then(response => {
-          return response.json()
-        })
-        .then(responseData => {
-          this.setState({
-            listToRender: responseData.bucketlists_on_page
-          });
-        });
+        this.fetchData('/bucketlists/');
       }
+
       this.setState(
         {
           APIResponse: responseData.message
@@ -103,19 +91,83 @@ class App extends Component {
     // redirect to LoginView
   }
 
+  // handleNameInput
+  handleNameInput = (event) => {
+    this.setState(
+      {
+        name: event.target.value
+      }
+    );
+  }
+
+  // addEntry
+  addEntry = (event, endpoint) => {
+    event.preventDefault();
+    const requestData = {
+      'name': this.state.name
+    }
+    const BASEURL = 'http://127.0.0.1:5000/v1';
+    fetch(BASEURL + endpoint, {
+      method: 'POST',
+      body: JSON.stringify(requestData),
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': this.state.ACCESSTOKEN
+      }
+    })
+    .then(response => {
+      return response.json()
+    })
+    .then(responseData => {
+      this.setState(
+        {
+          APIResponse: responseData.message
+        }
+      );
+      // redirect to BucketlistView
+      this.fetchData('/bucketlists/');
+    });
+  }
+
+  // fetch user data
+  fetchData = (endpoint) => {
+    const BASEURL = 'http://127.0.0.1:5000/v1';
+    fetch(BASEURL + endpoint, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': this.state.ACCESSTOKEN
+      }
+    })
+    .then(response => {
+      return response.json()
+    })
+    .then(responseData => {
+      this.setState({
+        listToRender: responseData.bucketlists_on_page
+      });
+    });
+  }
+
   render () {
     // logged in
     if (this.state.ACCESSTOKEN) {
       return (
         <Switch>
+          <Route path='/createbucketlist' render={() => (
+            <BucketlistForm
+              handleLogout={this.handleLogout}
+              value={this.state.name}
+              handleNameInput={this.handleNameInput}
+              APIResponse={this.state.APIResponse}
+              addBucketlist={(event) => this.addEntry(event, '/bucketlists/')}
+            />
+          )} />
           <Route path='/bucketlists/' render={() => (
             <BucketlistView handleLogout={this.handleLogout} listToRender={this.state.listToRender} />
           )} />
           <Route path='/bucketlists/:bucketlist_id' render={() => (
             <BucketlistView handleLogout={this.handleLogout} listToRender={this.state.listToRender} />
-          )} />
-          <Route path='/items/' render={() => (
-            <ItemView handleLogout={this.handleLogout} listToRender={this.state.listToRender} />
           )} />
           <Route path='/bucketlists/:bucketlist_id/items/' render={() => (
             <ItemView handleLogout={this.handleLogout} listToRender={this.state.listToRender} />
