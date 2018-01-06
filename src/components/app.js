@@ -13,7 +13,8 @@ class App extends Component {
       email: '',
       password: '',
       ACCESSTOKEN: '',
-      APIResponse: ''
+      APIResponse: '',
+      listToRender: []
     }
   }
 
@@ -45,6 +46,22 @@ class App extends Component {
           }
         );
         // redirect to BucketlistView
+        // fetch user's data
+        fetch(BASEURL + '/bucketlists/', {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': this.state.ACCESSTOKEN
+          }
+        })
+        .then(response => {
+          return response.json()
+        })
+        .then(responseData => {
+          this.setState({
+            listToRender: responseData.bucketlists_on_page
+          });
+        });
       }
       this.setState(
         {
@@ -92,19 +109,19 @@ class App extends Component {
       return (
         <Switch>
           <Route path='/bucketlists/' render={() => (
-            <BucketlistView handleLogout={this.handleLogout} />
+            <BucketlistView handleLogout={this.handleLogout} listToRender={this.state.listToRender} />
           )} />
           <Route path='/bucketlists/:bucketlist_id' render={() => (
-            <BucketlistView handleLogout={this.handleLogout} />
+            <BucketlistView handleLogout={this.handleLogout} listToRender={this.state.listToRender} />
           )} />
           <Route path='/items/' render={() => (
-            <ItemView handleLogout={this.handleLogout} />
+            <ItemView handleLogout={this.handleLogout} listToRender={this.state.listToRender} />
           )} />
           <Route path='/bucketlists/:bucketlist_id/items/' render={() => (
-            <ItemView handleLogout={this.handleLogout} />
+            <ItemView handleLogout={this.handleLogout} listToRender={this.state.listToRender} />
           )} />
           <Route path='/bucketlists/:bucketlist_id/items/:item_id' render={() => (
-            <ItemView handleLogout={this.handleLogout} />
+            <ItemView handleLogout={this.handleLogout} listToRender={this.state.listToRender} />
           )} />
           <Redirect to="/bucketlists/" />
         </Switch>
@@ -114,16 +131,6 @@ class App extends Component {
     else {
       return (
         <Switch>
-          <Route exact path='/' render={(props) => (
-            <RegisterView
-              APIResponse={this.state.APIResponse}
-              submitForm={(event) => this.submitForm(event, '/auth/register')}
-              email={this.state.email}
-              password={this.state.password}
-              handleEmailChange={this.handleEmailChange}
-              handlePasswordChange={this.handlePasswordChange}
-            />
-          )} />
           <Route path='/auth/register' render={(props) => (
             <RegisterView
               APIResponse={this.state.APIResponse}
@@ -144,6 +151,17 @@ class App extends Component {
               handlePasswordChange={this.handlePasswordChange}
             />
           )} />
+          <Route exact path='/' render={(props) => (
+            <RegisterView
+              APIResponse={this.state.APIResponse}
+              submitForm={(event) => this.submitForm(event, '/auth/register')}
+              email={this.state.email}
+              password={this.state.password}
+              handleEmailChange={this.handleEmailChange}
+              handlePasswordChange={this.handlePasswordChange}
+            />
+          )} />
+          <Redirect to="/" />
         </Switch>
       );
     }

@@ -4,16 +4,8 @@ import Header from './header';
 import Main from './main';
 import Item from './item';
 
-const itemsToRender = [
-  {name: 'Track ten learning outcomes.', bucketlist: 'Career'},
-  {name: 'Buy football a kit.', bucketlist: 'Lifestyle'},
-  {name: 'Play guitar with more confidence.', bucketlist: 'Music'},
-  {name: 'Buy a Fender stratocaster.', bucketlist: 'Music'},
-  {name: 'Learn to love.', bucketlist: 'Relationship'}
-]
-
 const ItemView = (props) => {
-  const rows = itemsToRender.map((item) =>
+  const rows = props.listToRender.map((item) =>
     <Item key={item.name} itemName={item.name} itemBucket={item.bucketlist} />
   );
 

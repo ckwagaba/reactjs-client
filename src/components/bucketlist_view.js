@@ -4,19 +4,8 @@ import Header from './header';
 import Main from './main';
 import Bucketlist from './bucketlist';
 
-const listToRender = [
-  {name: 'Career'},
-  {name: 'Family'},
-  {name: 'Lifestyle'},
-  {name: 'Spiritual'},
-  {name: 'Music'},
-  {name: 'Business'},
-  {name: 'Leadership'},
-  {name: 'Relationship'}
-]
-
 const BucketlistView = (props) => {
-  const rows = listToRender.map((item) =>
+  const rows = props.listToRender.map((item) =>
     <Bucketlist key={item.name} bucketlistName={item.name} />
   );
 
