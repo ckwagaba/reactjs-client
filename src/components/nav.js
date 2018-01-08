@@ -21,7 +21,7 @@ class Nav extends Component {
         </div>
         <div className="nav_options">
           <ul className="menu">
-            <li>{localStorage.getItem('userName')}</li>
+            <li className="username">{localStorage.getItem('userName')}</li>
             <li><Link to="/auth/login" onClick={this.handleLogout}>Logout</Link></li>
           </ul>
         </div>

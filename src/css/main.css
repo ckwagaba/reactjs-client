@@ -128,6 +128,11 @@ nav {
   justify-content: flex-end;
 }
 
+.username {
+  color: #DA1C5C;
+  text-transform: uppercase;
+}
+
 .menu {
   margin: 0;
   padding: 0;
