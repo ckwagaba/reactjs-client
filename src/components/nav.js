@@ -7,6 +7,7 @@ class Nav extends Component {
     // reset ACCESSTOKEN and userName in local storage
     localStorage.setItem('ACCESSTOKEN', '');
     localStorage.setItem('userName', '');
+    window.location.pathname = '/auth/login';
   }
 
   render () {
@@ -22,7 +23,7 @@ class Nav extends Component {
         <div className="nav_options">
           <ul className="menu">
             <li className="username">{localStorage.getItem('userName')}</li>
-            <li><Link to="/auth/login" onClick={this.handleLogout}>Logout</Link></li>
+            <li onClick={this.handleLogout}>Logout</li>
           </ul>
         </div>
       </nav>

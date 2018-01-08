@@ -67,6 +67,7 @@ class LoginView extends Component {
             APIResponse: ''
           }
         );
+        window.location.pathname = '/bucketlists/';
       }
       // unsuccessful login: display a message
       else {
