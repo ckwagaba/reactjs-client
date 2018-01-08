@@ -12,10 +12,11 @@ class ItemView extends Component {
     }
   }
   componentDidMount() {
-    this.fetchData();
+    this.getItems();
   }
 
-  fetchData = () => {
+  // fetch bucketlist items
+  getItems = () => {
     fetch('http://127.0.0.1:5000/v1/bucketlists/' + this.props.match.params.bucketlistId + '/items/', {
       method: 'GET',
       headers: {
