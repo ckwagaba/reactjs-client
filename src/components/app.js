@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import '../css/main.css';
 import RegisterView from './register_view';
@@ -8,53 +8,19 @@ import ItemView from './item_view';
 import BucketlistForm from './bucketlist_form';
 import ItemForm from './item_form';
 
-class App extends Component {
-  constructor () {
-    super();
-    this.state = {
-      ACCESSTOKEN: ''
-    }
-  }
-
-  // handle logout
-  handleLogout = (event) => {
-    // reset access_token
-    this.setState(
-      {
-        ACCESSTOKEN: ''
-      }
-    );
-  }
-
-  render () {
+const App = (props) =>  {
     // logged in
-    if (this.state.ACCESSTOKEN) {
+    if (props.ACCESSTOKEN) {
       return (
         <Switch>
-          <Route path='/createbucketlist' render={() => (
-            <BucketlistForm
-              handleLogout={this.handleLogout}
-              ACCESSTOKEN={this.state.ACCESSTOKEN}
-            />
-          )} />
+          <Route path='/createbucketlist' component={BucketlistForm} />
           <Route path='/createitem/:bucketlistId' render={(props) => (
-            <ItemForm
-              handleLogout={this.handleLogout}
-              ACCESSTOKEN={this.state.ACCESSTOKEN}
-              {...props}
-            />
+            <ItemForm {...props} />
           )} />
           <Route path='/bucketlists/:bucketlistId/items/' render={(props) => (
-            <ItemView
-              handleLogout={this.handleLogout}
-              ACCESSTOKEN={this.state.ACCESSTOKEN}
-              {...props} />
+            <ItemView {...props} />
           )} />
-          <Route path='/bucketlists/' render={() => (
-            <BucketlistView
-              handleLogout={this.handleLogout}
-              ACCESSTOKEN={this.state.ACCESSTOKEN} />
-          )} />
+          <Route path='/bucketlists/' component={BucketlistView} />
           <Redirect to="/bucketlists/" />
         </Switch>
       );
@@ -70,7 +36,6 @@ class App extends Component {
         </Switch>
       );
     }
-  }
 }
 
 export default App;
