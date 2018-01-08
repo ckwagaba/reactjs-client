@@ -21,7 +21,7 @@ class ItemView extends Component {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': this.props.ACCESSTOKEN
+        'Authorization': localStorage.getItem('ACCESSTOKEN')
       }
     })
     .then(response => {

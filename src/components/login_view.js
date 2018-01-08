@@ -13,7 +13,6 @@ class LoginView extends Component {
     this.state = {
       email: '',
       password: '',
-      ACCESSTOKEN: '',
       APIResponse: ''
     }
   }
@@ -56,18 +55,20 @@ class LoginView extends Component {
     .then(responseData => {
       // on successful login
       if(responseData.access_token){
-        // store access token and clear the form
+        // local storage of ACCESSTOKEN and userName
+        localStorage.setItem('ACCESSTOKEN', responseData.access_token);
+        // get first part of email
+        localStorage.setItem('userName', this.state.email.split('@')[0]);
+        // clear form
         this.setState(
           {
-            ACCESSTOKEN: responseData.access_token,
             email: '',
             password: '',
             APIResponse: ''
           }
         );
-        console.log(this.state.ACCESSTOKEN);
       }
-      // unsuccessful login. display a message
+      // unsuccessful login: display a message
       else {
         this.setState(
           {

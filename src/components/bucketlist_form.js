@@ -34,7 +34,7 @@ class BucketlistForm extends Component {
       body: JSON.stringify(requestData),
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': this.props.ACCESSTOKEN
+        'Authorization': localStorage.getItem('ACCESSTOKEN')
       }
     })
     .then(response => {

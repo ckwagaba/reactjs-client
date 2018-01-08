@@ -9,8 +9,9 @@ import BucketlistForm from './bucketlist_form';
 import ItemForm from './item_form';
 
 const App = (props) =>  {
-    // logged in
-    if (props.ACCESSTOKEN) {
+    // get ACCESSTOKEN from local storage
+    // access protected routes if there is a valid token
+    if (localStorage.getItem('ACCESSTOKEN')) {
       return (
         <Switch>
           <Route path='/createbucketlist' component={BucketlistForm} />

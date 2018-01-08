@@ -2,22 +2,11 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 class Nav extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      ACCESSTOKEN: '',
-      userName: ''
-    }
-  }
-
   // handle logout
   handleLogout = (event) => {
-    // reset access_token
-    this.setState(
-      {
-        ACCESSTOKEN: ''
-      }
-    );
+    // reset ACCESSTOKEN and userName in local storage
+    localStorage.setItem('ACCESSTOKEN', '');
+    localStorage.setItem('userName', '');
   }
 
   render () {
@@ -32,7 +21,7 @@ class Nav extends Component {
         </div>
         <div className="nav_options">
           <ul className="menu">
-            <li>{this.state.userName}</li>
+            <li>{localStorage.getItem('userName')}</li>
             <li><Link to="/auth/login" onClick={this.handleLogout}>Logout</Link></li>
           </ul>
         </div>
