@@ -37,7 +37,7 @@ class BucketlistView extends Component {
 
   render () {
     const rows = this.state.listToRender.map((item) =>
-      <Bucketlist key={item.name} bucketlistName={item.name} bucketlistId={item.id} />
+      <Bucketlist key={item.id} bucketlistName={item.name} bucketlistId={item.id} />
     );
 
     return (
