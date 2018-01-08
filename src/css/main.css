@@ -133,6 +133,15 @@ nav {
   text-transform: uppercase;
 }
 
+.logout_button {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.logout_button:hover {
+  text-decoration: none;
+}
+
 .menu {
   margin: 0;
   padding: 0;

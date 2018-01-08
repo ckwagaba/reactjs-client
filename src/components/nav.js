@@ -15,15 +15,15 @@ class Nav extends Component {
       <nav>
         <div className="nav_links">
           <ul className="menu">
-            <li><Link to="/bucketlists/">Lists</Link></li>
-            <li><Link to="/items/">Goals</Link></li>
-            <li><Link to="">Achievements</Link></li>
+            <li><Link to="/bucketlists/">Bucketlists</Link></li>
+            <li><Link to="">NavLink</Link></li>
+            <li><Link to="">NavLink</Link></li>
           </ul>
         </div>
         <div className="nav_options">
           <ul className="menu">
             <li className="username">{localStorage.getItem('userName')}</li>
-            <li onClick={this.handleLogout}>Logout</li>
+            <li onClick={this.handleLogout} className="logout_button">Logout</li>
           </ul>
         </div>
       </nav>
