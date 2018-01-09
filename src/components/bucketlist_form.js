@@ -47,13 +47,18 @@ componentDidMount() {
       return response.json()
     })
     .then(responseData => {
-      this.setState(
-        {
-          APIResponse: responseData.message,
-          name: ''
-        }
-      );
-      this.props.history.push('/bucketlists/');
+      // display message in case of an error
+      if(responseData.message) {
+        this.setState(
+          {
+            APIResponse: responseData.message,
+            name: ''
+          }
+        );
+      }
+      else {
+        this.props.history.push('/bucketlists/');
+      }
     });
   }
 
