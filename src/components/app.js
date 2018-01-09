@@ -14,9 +14,10 @@ const App = (props) =>  {
       return (
         <Switch>
           <Route exact path='/bucketlists/' component={BucketlistView} />
-          <Route exact path='/createbucketlist' component={BucketlistForm} />
+          <Route exact path='/bucketlistform' component={BucketlistForm} />
           <Route exact path='/createitem/:bucketlistId' component={ItemForm} />
           <Route exact path='/bucketlists/:bucketlistId/items/' component={ItemView} />
+          <Route exact path='/bucketlistform/:bucketlistId/:bucketlistName' component={BucketlistForm} />
         </Switch>
       );
     }

@@ -43,7 +43,7 @@ class BucketlistView extends Component {
     return (
       <div className="landing_page bucketlist_view">
         <Nav handleLogout={this.props.handleLogout} />
-        <Header currentLocation="Bucketlists" itemForm='/createbucketlist' />
+        <Header currentLocation="Bucketlists" itemForm='/bucketlistform' />
         <Main componentToRender={rows} />
       </div>
     );

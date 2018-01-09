@@ -13,6 +13,17 @@ class BucketlistForm extends Component {
     }
   }
 
+componentDidMount() {
+  // load with a name value for update case
+  if(this.props.match.params.bucketlistName){
+    this.setState(
+      {
+        name: this.props.match.params.bucketlistName
+      }
+    );
+  }
+}
+
   // handleNameInput
   handleNameInput = (event) => {
     this.setState(
@@ -22,15 +33,10 @@ class BucketlistForm extends Component {
     );
   }
 
-  // add new bucketlist
-  addBucketlist = (event) => {
-    event.preventDefault();
-    const requestData = {
-      'name': this.state.name
-    };
-
-    fetch('http://127.0.0.1:5000/v1/bucketlists/', {
-      method: 'POST',
+  // create or update bucketlist
+  createOrUpdateBucketlist = (requestData, url, method) => {
+    fetch(url, {
+      method: method,
       body: JSON.stringify(requestData),
       headers: {
         'Content-Type': 'application/json',
@@ -49,6 +55,23 @@ class BucketlistForm extends Component {
       );
       this.props.history.push('/bucketlists/');
     });
+  }
+
+  // add bucketlist
+  addBucketlist = (event) => {
+    event.preventDefault();
+    const requestData = {
+      'name': this.state.name
+    };
+    const BASEURL = 'http://127.0.0.1:5000/v1/bucketlists/';
+    // for an update
+    if(this.props.match.params.bucketlistId){
+      this.createOrUpdateBucketlist(requestData, BASEURL + this.props.match.params.bucketlistId, 'PUT');
+    }
+    // for a creation
+    else {
+      this.createOrUpdateBucketlist(requestData, BASEURL, 'POST');
+    }
   }
 
   render () {
