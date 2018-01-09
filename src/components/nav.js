@@ -6,6 +6,7 @@ class Nav extends Component {
   handleLogout = (event) => {
     // reset ACCESSTOKEN and userName in local storage
     localStorage.setItem('ACCESSTOKEN', '');
+    localStorage.setItem('userHasAuthenticated', false);
     localStorage.setItem('userName', '');
     window.location.pathname = '/auth/login';
   }
