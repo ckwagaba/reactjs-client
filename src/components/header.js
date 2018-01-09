@@ -10,8 +10,6 @@ const Header = (props) => {
           <div className="round_button create_button">+</div>
         </Link>
         <span>{props.currentLocation}</span>
-        <span className="current_location_bucketlist_name_separator">in</span>
-        <span className="bucketlist_name">{props.bucketlistName}</span>
       </div>
       <div className="search">
         <SearchBar placeholder="Enter Search Term" />
