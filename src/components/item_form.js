@@ -13,6 +13,17 @@ class ItemForm extends Component {
     }
   }
 
+  componentDidMount() {
+    // load with a name value for update case
+    if(this.props.match.params.itemName){
+      this.setState(
+        {
+          name: this.props.match.params.itemName
+        }
+      );
+    }
+  }
+
   // handleNameInput
   handleNameInput = (event) => {
     this.setState(
@@ -22,14 +33,10 @@ class ItemForm extends Component {
     );
   }
 
-  // add item to bucketlist
-  addItem = (event) => {
-    event.preventDefault();
-    const requestData = {
-      'name': this.state.name
-    }
-    fetch('http://127.0.0.1:5000/v1/bucketlists/' + this.props.match.params.bucketlistId + '/items/', {
-      method: 'POST',
+  // create or update item
+  createOrUpdateItem = (requestData, url, method) => {
+    fetch(url, {
+      method: method,
       body: JSON.stringify(requestData),
       headers: {
         'Content-Type': 'application/json',
@@ -48,6 +55,23 @@ class ItemForm extends Component {
       );
       this.props.history.push('/bucketlists/' + this.props.match.params.bucketlistId + '/items/');
     });
+  }
+
+  // add item to bucketlist
+  addItem = (event) => {
+    event.preventDefault();
+    const requestData = {
+      'name': this.state.name
+    }
+    const BASEURL = 'http://127.0.0.1:5000/v1/bucketlists/' + this.props.match.params.bucketlistId + '/items/';
+    // for an update
+    if(this.props.match.params.itemId){
+      this.createOrUpdateItem(requestData, BASEURL + this.props.match.params.itemId, 'PUT');
+    }
+    // for a creation
+    else {
+      this.createOrUpdateItem(requestData, BASEURL, 'POST');
+    }
   }
 
   render () {

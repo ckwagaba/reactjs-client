@@ -1,7 +1,13 @@
 import React from 'react';
 import Button from './button';
+import { withRouter } from 'react-router-dom';
 
 const Item = (props) => {
+  // redirect to bucketlist form
+  const callItemForm = (bucketlistId, itemName, itemId) => {
+    props.history.push('/itemform/' + bucketlistId + '/' + itemName + '/' + itemId);
+  }
+
   // handle item delete
   const handleDelete = (bucketlistId) => {
     fetch('http://127.0.0.1:5000/v1/bucketlists/' + props.bucketlistId + '/items/' + props.itemId, {
@@ -25,11 +31,11 @@ const Item = (props) => {
       <span className="item_name">{props.itemName}</span>
       <span className="item_bucket">{props.itemBucket}</span>
       <span className="item_actions">
-        <Button buttonText="Edit" className="edit_button" />
+        <Button buttonText="Edit" className="edit_button" onClick={() => callItemForm(props.bucketlistId, props.itemName, props.itemId)} />
         <Button buttonText="Delete" className="delete_button" onClick={() => handleDelete(props.itemId)} />
       </span>
     </div>
   );
 }
 
-export default Item;
+export default withRouter(Item);

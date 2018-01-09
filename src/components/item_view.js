@@ -41,7 +41,7 @@ class ItemView extends Component {
     return (
       <div className="landing_page item_view">
         <Nav handleLogout={this.props.handleLogout} />
-        <Header currentLocation="Items" itemForm={'/createitem/' + this.props.match.params.bucketlistId} />
+        <Header currentLocation="Items" itemForm={'/itemform/' + this.props.match.params.bucketlistId} />
         <Main componentToRender={rows} />
       </div>
     );
