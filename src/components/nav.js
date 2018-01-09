@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 class Nav extends Component {
   // handle logout
@@ -8,7 +8,7 @@ class Nav extends Component {
     localStorage.setItem('ACCESSTOKEN', '');
     localStorage.setItem('userHasAuthenticated', false);
     localStorage.setItem('userName', '');
-    window.location.pathname = '/auth/login';
+    this.props.history.push('/auth/login');
   }
 
   render () {
@@ -32,4 +32,4 @@ class Nav extends Component {
   }
 }
 
-export default Nav;
+export default withRouter(Nav);

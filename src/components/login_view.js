@@ -68,7 +68,8 @@ class LoginView extends Component {
             APIResponse: ''
           }
         );
-        window.location.pathname = '/bucketlists/';
+        // redirect to dashboard
+        this.props.history.push('/bucketlists/');
       }
       // unsuccessful login: display a message
       else {
