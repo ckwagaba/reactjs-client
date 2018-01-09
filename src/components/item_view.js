@@ -8,7 +8,8 @@ class ItemView extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      listToRender: []
+      listToRender: [],
+      bucketlistName: ''
     }
   }
   componentDidMount() {
@@ -28,8 +29,22 @@ class ItemView extends Component {
       return response.json()
     })
     .then(responseData => {
-      this.setState({
-        listToRender: responseData.bucketlist_items_on_page
+      // get bucketlist name
+      fetch('http://127.0.0.1:5000/v1/bucketlists/' + this.props.match.params.bucketlistId, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': localStorage.getItem('ACCESSTOKEN')
+        }
+      })
+      .then(secondaryResponse => {
+        return secondaryResponse.json()
+      })
+      .then(secondaryResponseData => {
+        this.setState({
+          listToRender: responseData.bucketlist_items_on_page,
+          bucketlistName: secondaryResponseData.name
+        });
       });
     });
   }
@@ -41,7 +56,7 @@ class ItemView extends Component {
     return (
       <div className="landing_page item_view">
         <Nav handleLogout={this.props.handleLogout} />
-        <Header currentLocation="Item" itemForm={'/createitem/' + this.props.match.params.bucketlistId} />
+        <Header currentLocation="Items" itemForm={'/createitem/' + this.props.match.params.bucketlistId} bucketlistName={this.state.bucketlistName} />
         <Main componentToRender={rows} />
       </div>
     );

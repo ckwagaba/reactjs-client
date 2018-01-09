@@ -170,6 +170,15 @@ header {
   align-items: center;
 }
 
+.current_location_bucketlist_name_separator {
+  margin: 0 1rem;
+}
+
+.bucketlist_name {
+  color: #DA1C5C;
+  text-transform: capitalize;
+}
+
 .round_button {
   width: 3rem;
   height: 3rem;
