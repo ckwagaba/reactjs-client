@@ -46,6 +46,7 @@ class ItemForm extends Component {
           name: ''
         }
       );
+      this.props.history.push('/bucketlists/' + this.props.match.params.bucketlistId + '/items/');
     });
   }
 

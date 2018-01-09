@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 const Bucketlist = (props) => {
   // handle bucketlist delete
   const handleDelete = (bucketlistId) => {
-    console.log('c');
     fetch('http://127.0.0.1:5000/v1/bucketlists/' + props.bucketlistId, {
       method: 'DELETE',
       headers: {
@@ -18,6 +17,7 @@ const Bucketlist = (props) => {
     })
     .then(responseData => {
       // on successful delete: re-render BucketlistView component
+      props.getBucketlists();
     });
   }
 

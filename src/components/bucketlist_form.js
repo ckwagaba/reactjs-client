@@ -47,6 +47,7 @@ class BucketlistForm extends Component {
           name: ''
         }
       );
+      this.props.history.push('/bucketlists/');
     });
   }
 

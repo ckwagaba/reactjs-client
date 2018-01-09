@@ -1,11 +1,9 @@
 import React from 'react';
 import Button from './button';
-import { withRouter } from "react-router-dom";
 
 const Item = (props) => {
   // handle item delete
   const handleDelete = (bucketlistId) => {
-    console.log('c');
     fetch('http://127.0.0.1:5000/v1/bucketlists/' + props.bucketlistId + '/items/' + props.itemId, {
       method: 'DELETE',
       headers: {
@@ -18,7 +16,7 @@ const Item = (props) => {
     })
     .then(responseData => {
       // on successful delete: re-render ItemtView component
-      props.history.push('/bucketlists/' + props.bucketlistId + '/items/');
+      props.getItems();
     });
   }
 
@@ -34,4 +32,4 @@ const Item = (props) => {
   );
 }
 
-export default withRouter(Item);
+export default Item;

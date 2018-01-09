@@ -36,7 +36,7 @@ class ItemView extends Component {
 
   render () {
     const rows = this.state.listToRender.map((item) =>
-      <Item key={item.id} itemName={item.name} bucketlistId={item.bucketlist_id} itemId={item.id} />
+      <Item key={item.id} itemName={item.name} bucketlistId={item.bucketlist_id} itemId={item.id} getItems={this.getItems} />
     );
     return (
       <div className="landing_page item_view">
