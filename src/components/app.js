@@ -13,10 +13,10 @@ const App = (props) =>  {
     if (localStorage.getItem('userHasAuthenticated') === 'true') {
       return (
         <Switch>
-          <Route path='/bucketlists/' component={BucketlistView} />
-          <Route path='/createbucketlist' component={BucketlistForm} />
-          <Route path='/createitem/:bucketlistId' component={ItemForm} />
-          <Route path='/bucketlists/:bucketlistId/items/' component={ItemView} />
+          <Route exact path='/bucketlists/' component={BucketlistView} />
+          <Route exact path='/createbucketlist' component={BucketlistForm} />
+          <Route exact path='/createitem/:bucketlistId' component={ItemForm} />
+          <Route exact path='/bucketlists/:bucketlistId/items/' component={ItemView} />
         </Switch>
       );
     }
@@ -24,8 +24,8 @@ const App = (props) =>  {
     else {
       return (
         <Switch>
-          <Route path='/auth/register' component={RegisterView} />
-          <Route path='/auth/login' component={LoginView} />
+          <Route exact path='/auth/register' component={RegisterView} />
+          <Route exact path='/auth/login' component={LoginView} />
           <Route exact path='/' component={RegisterView} />
         </Switch>
       );
