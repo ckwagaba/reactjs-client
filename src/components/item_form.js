@@ -83,7 +83,7 @@ class ItemForm extends Component {
             <span>Item</span>
           </div>
           <div className="header_right">
-            <Link to="/bucketlists/">
+            <Link to={'/bucketlists/' + this.props.match.params.bucketlistId + '/items/'}>
               <div className="round_button cancel_button">+</div>
             </Link>
           </div>
