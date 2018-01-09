@@ -57,6 +57,7 @@ class LoginView extends Component {
       if(responseData.access_token){
         // local storage of ACCESSTOKEN and userName
         localStorage.setItem('ACCESSTOKEN', responseData.access_token);
+        localStorage.setItem('userHasAuthenticated', true);
         // get first part of email
         localStorage.setItem('userName', this.state.email.split('@')[0]);
         // clear form
