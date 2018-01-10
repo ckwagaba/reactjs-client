@@ -40,7 +40,7 @@ class ItemView extends Component {
     })
     .then(responseData => {
       this.setState({
-        totalItems: responseData.number_of_bucketlists_on_page
+        totalItems: responseData.number_of_bucketlist_items_on_page
       });
       // get totalPages
       if(this.state.totalItems > this.state.limit) {
