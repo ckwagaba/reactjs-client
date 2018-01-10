@@ -161,7 +161,6 @@ header {
   display: flex;
   padding: 2rem;
   align-items: center;
-  border-bottom: 1px solid #EFEFEF;
 }
 
 .header_left {
@@ -226,10 +225,32 @@ header {
 }
 
 main {
-  padding: 2rem 2rem 0 2rem;
+  padding: 2rem;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  border-bottom: 1px solid #EFEFEF;
+  border-top: 1px solid #EFEFEF;
+}
+
+footer {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.page_button {
+  padding: 0.5rem 1rem;
+  background: #E1E1E1;
+  border: 1px solid #CCC;
+  cursor: default;
+  border-radius: 3px;
+  margin: 0 1px;
+}
+
+.page_button:hover {
+  background: #EEE;
+  box-shadow: 0 5px 5px #CCC;
 }
 
 .entry_form {
@@ -250,6 +271,7 @@ main {
   border: 1px solid #CCC;
   margin: 0 .2rem 1rem;
   box-shadow: 0 5px 5px #CCC;
+  text-transform: uppercase;
 }
 
 .bucketlist:hover {
@@ -304,6 +326,7 @@ button:hover {
   width: 80%;
   display: flex;
   align-items: center;
+  text-transform: capitalize;
 }
 
 .item > span {
