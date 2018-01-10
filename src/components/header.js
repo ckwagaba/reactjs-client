@@ -12,7 +12,7 @@ const Header = (props) => {
         <span>{props.currentLocation}</span>
       </div>
       <div className="search">
-        <SearchBar placeholder="Enter Search Term" />
+        <SearchBar placeholder="Enter Search Term" searchTerm={props.searchTerm} handleSearch={props.handleSearch} />
       </div>
     </header>
   );

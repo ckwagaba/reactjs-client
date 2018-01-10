@@ -8,7 +8,8 @@ class ItemView extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      listToRender: []
+      listToRender: [],
+      searchTerm: ''
     }
   }
   componentDidMount() {
@@ -17,7 +18,7 @@ class ItemView extends Component {
 
   // fetch bucketlist items
   getItems = () => {
-    fetch('http://127.0.0.1:5000/v1/bucketlists/' + this.props.match.params.bucketlistId + '/items/', {
+    fetch('http://127.0.0.1:5000/v1/bucketlists/' + this.props.match.params.bucketlistId + '/items/?q=' + this.state.searchTerm, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -34,6 +35,14 @@ class ItemView extends Component {
     });
   }
 
+  // search API for items
+  handleSearch = (event) => {
+    this.setState({
+      searchTerm: event.target.value
+    });
+    this.getItems();
+  }
+
   render () {
     const rows = this.state.listToRender.map((item) =>
       <Item key={item.id} itemName={item.name} bucketlistId={item.bucketlist_id} itemId={item.id} getItems={this.getItems} />
@@ -41,7 +50,7 @@ class ItemView extends Component {
     return (
       <div className="landing_page item_view">
         <Nav handleLogout={this.props.handleLogout} />
-        <Header currentLocation="Items" itemForm={'/itemform/' + this.props.match.params.bucketlistId} />
+        <Header currentLocation="Items" itemForm={'/itemform/' + this.props.match.params.bucketlistId} searchTerm={this.state.searchTerm} handleSearch={this.handleSearch} />
         <Main componentToRender={rows} />
       </div>
     );

@@ -1,13 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class SearchBar extends Component {
-  render () {
-    return (
-      <div>
-        <input type="text" className="text_input search_input" placeholder={this.props.placeholder} />
-      </div>
-    );
-  }
+const SearchBar = (props) => {
+  return (
+    <div>
+      <input type="text" className="text_input search_input" placeholder={props.placeholder} value={props.searchTerm} onChange={props.handleSearch} />
+    </div>
+  );
 }
 
 export default SearchBar;
