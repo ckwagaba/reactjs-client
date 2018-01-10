@@ -17,8 +17,6 @@ class Nav extends Component {
         <div className="nav_links">
           <ul className="menu">
             <li><Link to="/bucketlists/">Bucketlists</Link></li>
-            <li><Link to="">NavLink</Link></li>
-            <li><Link to="">NavLink</Link></li>
           </ul>
         </div>
         <div className="nav_options">
