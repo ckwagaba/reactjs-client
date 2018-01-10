@@ -249,6 +249,11 @@ main {
   flex-direction: column;
   border: 1px solid #CCC;
   margin: 0 .2rem 1rem;
+  box-shadow: 0 5px 5px #CCC;
+}
+
+.bucketlist:hover {
+  box-shadow: none;
 }
 
 .bucketlist_thumbnail {
