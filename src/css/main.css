@@ -170,11 +170,8 @@ header {
   align-items: center;
 }
 
-.current_location_bucketlist_name_separator {
-  margin: 0 1rem;
-}
-
 .bucketlist_name {
+  margin: 0 1rem;
   color: #DA1C5C;
   text-transform: capitalize;
 }
