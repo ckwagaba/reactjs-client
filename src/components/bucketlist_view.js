@@ -20,7 +20,7 @@ class BucketlistView extends Component {
 
   componentDidMount() {
     // start pagination
-    this.paginate();
+    //this.paginate();
     // get as required
     this.getBucketlists();
   }
@@ -86,7 +86,7 @@ class BucketlistView extends Component {
 
   render () {
     // get bucketlists
-    this.getBucketlists();
+    //this.getBucketlists();
 
     // render bucketlists
     const rows = this.state.listToRender.map((item) =>

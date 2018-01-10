@@ -20,7 +20,7 @@ class ItemView extends Component {
   }
   componentDidMount() {
     // start pagination
-    this.paginate();
+    //this.paginate();
     // get as required
     this.getItems();
   }
@@ -100,7 +100,7 @@ class ItemView extends Component {
 
   render () {
     // get items
-    this.getItems();
+    //this.getItems();
 
     const rows = this.state.listToRender.map((item) =>
       <Item key={item.id} itemName={item.name} bucketlistId={item.bucketlist_id} itemId={item.id} getItems={this.getItems} />
