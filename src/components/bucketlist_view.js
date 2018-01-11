@@ -12,7 +12,7 @@ class BucketlistView extends Component {
       listToRender: [],
       searchTerm: '',
       totalItems: 0,
-      limit: 1,
+      limit: 5,
       currentPage: 1,
       totalPages: 1
     }

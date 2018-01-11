@@ -13,7 +13,7 @@ class ItemView extends Component {
       searchTerm: '',
       bucketlistName: '',
       totalItems: 0,
-      limit: 1,
+      limit: 3,
       currentPage: 1,
       totalPages: 1
     }
