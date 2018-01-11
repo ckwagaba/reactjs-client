@@ -12,17 +12,22 @@ class BucketlistView extends Component {
       listToRender: [],
       searchTerm: '',
       totalItems: 0,
-      limit: 3,
+      limit: 1,
       currentPage: 1,
       totalPages: 1
     }
   }
 
   componentDidMount() {
-    // start pagination
-    //this.paginate();
     // get as required
     this.getBucketlists();
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    // get as required
+    if(prevState.currentPage !== this.state.currentPage) {
+      this.getBucketlists();
+    }
   }
 
   // pagination
@@ -85,6 +90,7 @@ class BucketlistView extends Component {
   }
 
   render () {
+    console.log(this.state.currentPage);
     // get bucketlists
     //this.getBucketlists();
 
