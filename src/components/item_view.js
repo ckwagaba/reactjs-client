@@ -18,11 +18,18 @@ class ItemView extends Component {
       totalPages: 1
     }
   }
+
+  // initial component render
   componentDidMount() {
-    // start pagination
-    //this.paginate();
-    // get as required
     this.getItems();
+  }
+
+  // when component re-renders
+  componentDidUpdate(prevProps, prevState) {
+    // get as required
+    if(prevState.currentPage !== this.state.currentPage) {
+      this.getItems();
+    }
   }
 
   // pagination

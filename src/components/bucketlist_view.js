@@ -18,11 +18,13 @@ class BucketlistView extends Component {
     }
   }
 
+  // initial component render
   componentDidMount() {
     // get as required
     this.getBucketlists();
   }
 
+  // when component re-renders
   componentDidUpdate(prevProps, prevState) {
     // get as required
     if(prevState.currentPage !== this.state.currentPage) {
