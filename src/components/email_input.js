@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class TextInput extends Component {
+class EmailInput extends Component {
   render () {
     return (
       <div>
@@ -10,4 +10,4 @@ class TextInput extends Component {
   }
 }
 
-export default TextInput;
+export default EmailInput;
