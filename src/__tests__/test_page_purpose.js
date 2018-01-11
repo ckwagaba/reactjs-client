@@ -1,10 +1,10 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import RegisterView from '../components/register_view';
+import PagePurpose from '../components/page_purpose';
 
-describe('RegisterView component', () => {
+describe('PagePurpose component', () => {
 
-  const component = shallow(<RegisterView />);
+  const component = shallow(<PagePurpose />);
 
   it('should exist', () => {
     expect(component.exists()).toEqual(true);

@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import LoginView from '../components/login_view';
 
-describe('Register component', () => {
+describe('LoginView component', () => {
 
   const component = shallow(<LoginView />);
 
