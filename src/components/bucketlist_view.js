@@ -92,10 +92,6 @@ class BucketlistView extends Component {
   }
 
   render () {
-    console.log(this.state.currentPage);
-    // get bucketlists
-    //this.getBucketlists();
-
     // render bucketlists
     const rows = this.state.listToRender.map((item) =>
       <Bucketlist key={item.id} bucketlistName={item.name} bucketlistId={item.id} getBucketlists={this.getBucketlists} />
