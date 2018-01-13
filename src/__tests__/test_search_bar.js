@@ -4,10 +4,10 @@ import SearchBar from '../components/search_bar';
 
 describe('SearchBar component', () => {
 
-  const component = shallow(<SearchBar />);
+  const component = <SearchBar />;
 
   it('should exist', () => {
-    expect(component.exists()).toEqual(true);
+    expect(component).toMatchSnapshot();
   });
 
 });

@@ -4,10 +4,10 @@ import Header from '../components/header';
 
 describe('Header component', () => {
 
-  const component = shallow(<Header />);
+  const component = <Header />;
 
   it('should exist', () => {
-    expect(component.exists()).toEqual(true);
+    expect(component).toMatchSnapshot();
   });
 
 });

@@ -4,10 +4,10 @@ import ItemForm from '../components/item_form';
 
 describe('ItemForm component', () => {
 
-  const component = shallow(<ItemForm />);
+  const component = <ItemForm />;
 
   it('should exist', () => {
-    expect(component.exists()).toEqual(true);
+    expect(component).toMatchSnapshot();
   });
 
 });

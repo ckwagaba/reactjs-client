@@ -4,10 +4,10 @@ import ServerResponse from '../components/server_response';
 
 describe('ServerResponse component', () => {
 
-  const component = shallow(<ServerResponse />);
+  const component = <ServerResponse />;
 
   it('should exist', () => {
-    expect(component.exists()).toEqual(true);
+    expect(component).toMatchSnapshot();
   });
 
 });

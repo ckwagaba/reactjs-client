@@ -4,10 +4,10 @@ import AltOption from '../components/alt_option';
 
 describe('AltOption component', () => {
 
-  const component = shallow(<AltOption />);
+  const component = <AltOption />;
 
   it('should exist', () => {
-    expect(component.exists()).toEqual(true);
+    expect(component).toMatchSnapshot();
   });
 
 });

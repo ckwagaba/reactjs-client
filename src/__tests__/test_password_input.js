@@ -5,8 +5,8 @@ import PasswordInput from '../components/password_input';
 describe ('PasswordInput component', () => {
 
   it('should exist', () => {
-    const component = shallow(<PasswordInput />);
-    expect(component.exists()).toEqual(true);
+    const component = <PasswordInput />;
+    expect(component).toMatchSnapshot();
   });
 
 });

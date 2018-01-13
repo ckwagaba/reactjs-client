@@ -4,10 +4,10 @@ import Main from '../components/main';
 
 describe('Main component', () => {
 
-  const component = shallow(<Main />);
+  const component = <Main />;
 
   it('should exist', () => {
-    expect(component.exists()).toEqual(true);
+    expect(component).toMatchSnapshot();
   });
 
 });

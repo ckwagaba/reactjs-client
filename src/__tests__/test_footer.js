@@ -4,10 +4,10 @@ import Footer from '../components/footer';
 
 describe('Footer component', () => {
 
-  const component = shallow(<Footer />);
+  const component = <Footer />;
 
   it('should exist', () => {
-    expect(component.exists()).toEqual(true);
+    expect(component).toMatchSnapshot();
   });
 
 });

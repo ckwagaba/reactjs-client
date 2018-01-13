@@ -4,10 +4,10 @@ import Bucketlist from '../components/bucketlist';
 
 describe('Bucketlist component', () => {
 
-  const component = shallow(<Bucketlist />);
+  const component = <Bucketlist />;
 
   it('should exist', () => {
-    expect(component.exists()).toEqual(true);
+    expect(component).toMatchSnapshot();
   });
 
 });

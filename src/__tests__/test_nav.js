@@ -4,10 +4,10 @@ import Nav from '../components/nav';
 
 describe('Nav component', () => {
 
-  const component = shallow(<Nav />);
+  const component = <Nav />;
 
   it('should exist', () => {
-    expect(component.exists()).toEqual(true);
+    expect(component).toMatchSnapshot();
   });
 
 });

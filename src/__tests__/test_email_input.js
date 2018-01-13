@@ -4,10 +4,10 @@ import EmailInput from '../components/email_input';
 
 describe('EmailInput component', () => {
 
-  const component = shallow(<EmailInput />);
+  const component = <EmailInput />;
 
   it('should exist', () => {
-    expect(component.exists()).toEqual(true);
+    expect(component).toMatchSnapshot();
   });
 
 });

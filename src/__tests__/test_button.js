@@ -4,10 +4,10 @@ import Button from '../components/button';
 
 describe('Button component', () => {
 
-  const component = shallow(<Button />);
+  const component = <Button />;
 
   it('should exist', () => {
-    expect(component.exists()).toEqual(true);
+    expect(component).toMatchSnapshot();
   });
 
 });

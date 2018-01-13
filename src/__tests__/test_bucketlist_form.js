@@ -4,10 +4,10 @@ import BucketlistForm from '../components/bucketlist_form';
 
 describe('BucketlistForm component', () => {
 
-  const component = shallow(<BucketlistForm />);
+  const component = <BucketlistForm />;
 
   it('should exist', () => {
-    expect(component.exists()).toEqual(true);
+    expect(component).toMatchSnapshot();
   });
 
 });

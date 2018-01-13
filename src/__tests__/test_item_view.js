@@ -4,10 +4,10 @@ import ItemView from '../components/item_view';
 
 describe('ItemView component', () => {
 
-  const component = shallow(<ItemView />);
+  const component = <ItemView />;
 
   it('should exist', () => {
-    expect(component.exists()).toEqual(true);
+    expect(component).toMatchSnapshot();
   });
 
 });

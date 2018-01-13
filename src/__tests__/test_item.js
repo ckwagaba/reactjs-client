@@ -4,10 +4,10 @@ import Item from '../components/item';
 
 describe('Item component', () => {
 
-  const component = shallow(<Item />);
+  const component = <Item />;
 
   it('should exist', () => {
-    expect(component.exists()).toEqual(true);
+    expect(component).toMatchSnapshot();
   });
 
 });

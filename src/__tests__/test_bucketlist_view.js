@@ -4,10 +4,10 @@ import BucketlistView from '../components/bucketlist_view';
 
 describe('BucketlistView component', () => {
 
-  const component = shallow(<BucketlistView />);
+  const component = <BucketlistView />;
 
   it('should exist', () => {
-    expect(component.exists()).toEqual(true);
+    expect(component).toMatchSnapshot();
   });
 
 });

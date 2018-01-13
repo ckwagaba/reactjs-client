@@ -4,10 +4,10 @@ import RegisterView from '../components/register_view';
 
 describe('RegisterView component', () => {
 
-  const component = shallow(<RegisterView />);
+  const component = <RegisterView />;
 
   it('should exist', () => {
-    expect(component.exists()).toEqual(true);
+    expect(component).toMatchSnapshot();
   });
 
 });

@@ -4,10 +4,10 @@ import AppDetails from '../components/app_details';
 
 describe('AppDetails component', () => {
 
-  const component = shallow(<AppDetails />);
+  const component = <AppDetails />;
 
   it('should exist', () => {
-    expect(component.exists()).toEqual(true);
+    expect(component).toMatchSnapshot();
   });
 
 });

@@ -4,10 +4,10 @@ import LoginView from '../components/login_view';
 
 describe('LoginView component', () => {
 
-  const component = shallow(<LoginView />);
+  const component = <LoginView />;
 
   it('should exist', () => {
-    expect(component.exists()).toEqual(true);
+    expect(component).toMatchSnapshot();
   });
 
 });
