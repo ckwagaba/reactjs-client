@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ItemForm component should exist 1`] = `
+<div
+  className="landing_page"
+>
+  <withRouter(Nav) />
+  <header>
+    <div
+      className="header_left"
+    >
+      <span>
+        Item
+      </span>
+    </div>
+    <div
+      className="header_right"
+    >
+      <Link
+        replace={false}
+        to="/bucketlists/1/items/"
+      >
+        <div
+          className="round_button cancel_button"
+        >
+          +
+        </div>
+      </Link>
+    </div>
+  </header>
+  <main
+    className="entry_form"
+  >
+    <form
+      onSubmit={[Function]}
+    >
+      <ServerResponse
+        serverResponse=""
+      />
+      <input
+        className="text_input"
+        onChange={[Function]}
+        placeholder="Item Name"
+        type="text"
+        value="career"
+      />
+      <SubmitButton
+        buttonText="Submit"
+      />
+    </form>
+  </main>
+</div>
+`;

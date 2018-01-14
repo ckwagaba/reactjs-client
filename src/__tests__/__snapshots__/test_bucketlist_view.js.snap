@@ -1,0 +1,213 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BucketlistView component should exist 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <BucketlistView />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <withRouter(Nav)
+          handleLogout={undefined}
+/>,
+        <Header
+          currentLocation="Bucketlists"
+          handleSearch={[Function]}
+          itemForm="/bucketlistform"
+          searchTerm=""
+/>,
+        <Main
+          componentToRender={Array []}
+/>,
+        <Footer
+          pageButtons={
+                    Array [
+                              <span
+                                className="page_button"
+                                onClick={[Function]}
+                    >
+                                1
+                    </span>,
+                            ]
+          }
+          pagination={[Function]}
+/>,
+      ],
+      "className": "landing_page bucketlist_view",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "handleLogout": undefined,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "currentLocation": "Bucketlists",
+          "handleSearch": [Function],
+          "itemForm": "/bucketlistform",
+          "searchTerm": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "componentToRender": Array [],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "pageButtons": Array [
+            <span
+              className="page_button"
+              onClick={[Function]}
+>
+              1
+</span>,
+          ],
+          "pagination": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <withRouter(Nav)
+            handleLogout={undefined}
+/>,
+          <Header
+            currentLocation="Bucketlists"
+            handleSearch={[Function]}
+            itemForm="/bucketlistform"
+            searchTerm=""
+/>,
+          <Main
+            componentToRender={Array []}
+/>,
+          <Footer
+            pageButtons={
+                        Array [
+                                    <span
+                                      className="page_button"
+                                      onClick={[Function]}
+                        >
+                                      1
+                        </span>,
+                                  ]
+            }
+            pagination={[Function]}
+/>,
+        ],
+        "className": "landing_page bucketlist_view",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "handleLogout": undefined,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "currentLocation": "Bucketlists",
+            "handleSearch": [Function],
+            "itemForm": "/bucketlistform",
+            "searchTerm": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "componentToRender": Array [],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "pageButtons": Array [
+              <span
+                className="page_button"
+                onClick={[Function]}
+>
+                1
+</span>,
+            ],
+            "pagination": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

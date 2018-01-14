@@ -1,0 +1,365 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+a {
+  color: #DA1C5C;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+input{
+	-webkit-appearance: none;
+	font-family: inherit;
+}
+
+input[type="text"], input[type="email"], input[type="password"]{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 20rem;
+	border: 2px solid #CCC;
+	background: #FFF;
+	padding: 1rem;
+  margin: .3rem 0;
+	vertical-align: middle;
+	font-size: 1rem;
+}
+
+input[type="submit"] {
+  display:inline-block;
+	padding: 1rem 2rem;
+  background: #DA1C5C;
+  color: #FFF;
+  border: 2px solid #DA1C5C;
+  font-size: 1rem;
+  margin: 2rem 0;
+}
+
+input[type="submit"]:hover {
+  background: none;
+  color: #DA1C5C;
+}
+
+.landing_page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #FAFAFA;
+}
+
+.app_details {
+  display: flex;
+  padding: 3rem;
+  align-items: center;
+  background: #DA1C5C;
+  color: #FFF;
+}
+
+.app_name {
+  text-transform: uppercase;
+  flex: 1;
+  font-size: 2rem;
+}
+
+.app_description {
+  flex: 2;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.form_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+}
+
+.page_purpose {
+  padding: 3rem 0;
+}
+
+.server_response {
+  padding: 1rem 0;
+  color: #F00;
+}
+
+.text_input {
+	text-align: center;
+}
+
+.email_input {
+
+}
+
+.password_input {
+
+}
+
+.submit_button {
+
+}
+
+.alt_option {
+  padding: 3rem;
+}
+
+nav {
+  display: flex;
+  padding: 2rem;
+  align-items: center;
+  background: #555;
+  color: #FFF;
+}
+
+.nav_links {
+  flex: 2;
+}
+
+.nav_options {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.username {
+  color: #DA1C5C;
+  text-transform: uppercase;
+}
+
+.logout_button {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.logout_button:hover {
+  text-decoration: none;
+}
+
+.menu {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.menu a {
+  color: #FFF;
+}
+
+.menu li {
+  float: left;
+  padding: 1rem;
+}
+
+header {
+  display: flex;
+  padding: 2rem;
+  align-items: center;
+}
+
+.header_left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.bucketlist_name {
+  margin: 0 1rem;
+  color: #DA1C5C;
+  text-transform: capitalize;
+}
+
+.round_button {
+  width: 3rem;
+  height: 3rem;
+  cursor: default;
+  color: #FFF;
+  border-radius: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+	-moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+	-webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+	-o-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+.create_button {
+  border: 2px solid #DA1C5C;
+  background: #DA1C5C;
+  margin-right: 1rem;
+}
+
+.cancel_button {
+  border: 2px solid #F00;
+  background: #F00;
+  transform: rotate(45deg);
+}
+
+.round_button:hover {
+  background: none;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  -o-box-shadow: none;
+}
+
+.create_button:hover {
+  color: #DA1C5C;
+}
+
+.cancel_button:hover {
+  color: #F00;
+}
+
+.search {
+  flex: 2;
+  display: flex;
+  justify-content: flex-end;
+}
+
+main {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #EFEFEF;
+  border-top: 1px solid #EFEFEF;
+}
+
+footer {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.page_button {
+  padding: 0.5rem 1rem;
+  background: #E1E1E1;
+  border: 1px solid #CCC;
+  cursor: default;
+  border-radius: 3px;
+  margin: 0 1px;
+}
+
+.page_button:hover {
+  background: #EEE;
+  box-shadow: 0 5px 5px #CCC;
+}
+
+.entry_form {
+  flex: 1;
+  align-items: center;
+}
+
+.entry_form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bucketlist {
+  width: calc(100% / 5 - 1rem);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #CCC;
+  margin: 0 .2rem 1rem;
+  box-shadow: 0 5px 5px #CCC;
+  text-transform: uppercase;
+}
+
+.bucketlist:hover {
+  box-shadow: none;
+}
+
+.bucketlist_thumbnail {
+  color: #000;
+  text-decoration: none;
+  background: #E1E1E1;
+  border-bottom: 1px solid #CCC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1rem;
+}
+
+.bucketlist_thumbnail:hover {
+  background: #EEE;
+}
+
+.bucketlist_actions {
+  background: #EFEFEF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  color: #FFF;
+  font-size: .9rem;
+}
+
+button:hover {
+  color: #000;
+  background: none;
+}
+
+.edit_button {
+  background: #FFBA5C;
+  border: 1px solid #F5732B;
+}
+
+.delete_button {
+  background: #F95F62;
+  border: 1px solid #AC1B1E;
+}
+
+.item {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+}
+
+.item > span {
+  padding: 1rem;
+}
+
+.item:last-of-type {
+  margin-bottom: 1rem;
+}
+
+.item:nth-child(odd) {
+  background: #EFEFEF;
+}
+
+.item:nth-child(even) {
+  background: #E5E5E5;
+}
+
+.item:hover {
+  background: #FFF;
+}
+
+.item_name {
+  flex: 3;
+}
+
+.item_bucket {
+  flex: 1;
+  color: #777;
+}
+
+.item_actions {
+  flex: 2;
+  display: flex;
+  justify-content: space-around;
+}

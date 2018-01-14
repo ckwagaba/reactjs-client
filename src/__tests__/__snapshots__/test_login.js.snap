@@ -1,0 +1,413 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginView component should exist 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <LoginView />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <AppDetails />,
+        <div
+          className="form_section"
+>
+          <PagePurpose
+                    purpose="Access your account"
+          />
+          <ServerResponse
+                    serverResponse=""
+          />
+          <form
+                    onSubmit={[Function]}
+          >
+                    <EmailInput
+                              handleInput={[Function]}
+                              placeholder="Email Address"
+                              value=""
+                    />
+                    <PasswordInput
+                              handleInput={[Function]}
+                              placeholder="Enter Password"
+                              value=""
+                    />
+                    <SubmitButton
+                              buttonText="Sign In"
+                    />
+          </form>
+          <AltOption
+                    altOptionLink="/auth/register"
+                    altOptionText="Sign Up"
+          />
+</div>,
+      ],
+      "className": "landing_page login_view",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <PagePurpose
+              purpose="Access your account"
+/>,
+            <ServerResponse
+              serverResponse=""
+/>,
+            <form
+              onSubmit={[Function]}
+>
+              <EmailInput
+                            handleInput={[Function]}
+                            placeholder="Email Address"
+                            value=""
+              />
+              <PasswordInput
+                            handleInput={[Function]}
+                            placeholder="Enter Password"
+                            value=""
+              />
+              <SubmitButton
+                            buttonText="Sign In"
+              />
+</form>,
+            <AltOption
+              altOptionLink="/auth/register"
+              altOptionText="Sign Up"
+/>,
+          ],
+          "className": "form_section",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "purpose": "Access your account",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "serverResponse": "",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <EmailInput
+                  handleInput={[Function]}
+                  placeholder="Email Address"
+                  value=""
+/>,
+                <PasswordInput
+                  handleInput={[Function]}
+                  placeholder="Enter Password"
+                  value=""
+/>,
+                <SubmitButton
+                  buttonText="Sign In"
+/>,
+              ],
+              "onSubmit": [Function],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "handleInput": [Function],
+                  "placeholder": "Email Address",
+                  "value": "",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "handleInput": [Function],
+                  "placeholder": "Enter Password",
+                  "value": "",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "buttonText": "Sign In",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
+            "type": "form",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "altOptionLink": "/auth/register",
+              "altOptionText": "Sign Up",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <AppDetails />,
+          <div
+            className="form_section"
+>
+            <PagePurpose
+                        purpose="Access your account"
+            />
+            <ServerResponse
+                        serverResponse=""
+            />
+            <form
+                        onSubmit={[Function]}
+            >
+                        <EmailInput
+                                    handleInput={[Function]}
+                                    placeholder="Email Address"
+                                    value=""
+                        />
+                        <PasswordInput
+                                    handleInput={[Function]}
+                                    placeholder="Enter Password"
+                                    value=""
+                        />
+                        <SubmitButton
+                                    buttonText="Sign In"
+                        />
+            </form>
+            <AltOption
+                        altOptionLink="/auth/register"
+                        altOptionText="Sign Up"
+            />
+</div>,
+        ],
+        "className": "landing_page login_view",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <PagePurpose
+                purpose="Access your account"
+/>,
+              <ServerResponse
+                serverResponse=""
+/>,
+              <form
+                onSubmit={[Function]}
+>
+                <EmailInput
+                                handleInput={[Function]}
+                                placeholder="Email Address"
+                                value=""
+                />
+                <PasswordInput
+                                handleInput={[Function]}
+                                placeholder="Enter Password"
+                                value=""
+                />
+                <SubmitButton
+                                buttonText="Sign In"
+                />
+</form>,
+              <AltOption
+                altOptionLink="/auth/register"
+                altOptionText="Sign Up"
+/>,
+            ],
+            "className": "form_section",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "purpose": "Access your account",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "serverResponse": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <EmailInput
+                    handleInput={[Function]}
+                    placeholder="Email Address"
+                    value=""
+/>,
+                  <PasswordInput
+                    handleInput={[Function]}
+                    placeholder="Enter Password"
+                    value=""
+/>,
+                  <SubmitButton
+                    buttonText="Sign In"
+/>,
+                ],
+                "onSubmit": [Function],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "handleInput": [Function],
+                    "placeholder": "Email Address",
+                    "value": "",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "handleInput": [Function],
+                    "placeholder": "Enter Password",
+                    "value": "",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "buttonText": "Sign In",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+              ],
+              "type": "form",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "altOptionLink": "/auth/register",
+                "altOptionText": "Sign Up",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

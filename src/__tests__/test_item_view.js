@@ -1,0 +1,26 @@
+import React from 'react';
+import { shallow } from 'enzyme';
+import ItemView from '../components/item_view';
+
+describe('ItemView component', () => {
+
+  const props = {
+    match: {
+      params: {
+        bucketlistId: 1,
+        itemName: 'career',
+        itemId: 1
+      }
+    },
+    history: '/bucketlists/'
+  }
+
+  const component = shallow(
+    <ItemView {...props} />
+  );
+
+  it('should exist', () => {
+    expect(component).toMatchSnapshot();
+  });
+
+});
