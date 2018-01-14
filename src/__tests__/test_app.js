@@ -4,7 +4,9 @@ import App from '../components/app';
 
 describe('App component', () => {
 
-  const component = <App />;
+  const component = shallow(
+    <App />
+  );
 
   it('should exist', () => {
     expect(component).toMatchSnapshot();

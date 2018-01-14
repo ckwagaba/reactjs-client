@@ -4,7 +4,9 @@ import Main from '../components/main';
 
 describe('Main component', () => {
 
-  const component = <Main />;
+  const component = shallow(
+    <Main />
+  );
 
   it('should exist', () => {
     expect(component).toMatchSnapshot();

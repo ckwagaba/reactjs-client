@@ -4,7 +4,9 @@ import Nav from '../components/nav';
 
 describe('Nav component', () => {
 
-  const component = <Nav />;
+  const component = shallow(
+    <Nav />
+  );
 
   it('should exist', () => {
     expect(component).toMatchSnapshot();

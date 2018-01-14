@@ -4,7 +4,9 @@ import Header from '../components/header';
 
 describe('Header component', () => {
 
-  const component = <Header />;
+  const component = shallow(
+    <Header />
+  );
 
   it('should exist', () => {
     expect(component).toMatchSnapshot();

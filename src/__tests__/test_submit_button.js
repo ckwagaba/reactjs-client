@@ -4,8 +4,12 @@ import SubmitButton from '../components/submit_button';
 
 describe ('SubmitButton component', () => {
 
+  const component = shallow(
+    <SubmitButton />
+  );
+
   it('should exist', () => {
-    const component = <SubmitButton />;
+
     expect(component).toMatchSnapshot();
   });
 

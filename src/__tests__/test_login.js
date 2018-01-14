@@ -4,7 +4,9 @@ import LoginView from '../components/login_view';
 
 describe('LoginView component', () => {
 
-  const component = <LoginView />;
+  const component = shallow(
+    <LoginView />
+  );
 
   it('should exist', () => {
     expect(component).toMatchSnapshot();

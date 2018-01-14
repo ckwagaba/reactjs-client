@@ -4,7 +4,9 @@ import Item from '../components/item';
 
 describe('Item component', () => {
 
-  const component = <Item />;
+  const component = shallow(
+    <Item />
+  );
 
   it('should exist', () => {
     expect(component).toMatchSnapshot();

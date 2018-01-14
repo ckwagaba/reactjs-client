@@ -4,7 +4,9 @@ import Button from '../components/button';
 
 describe('Button component', () => {
 
-  const component = <Button />;
+  const component = shallow(
+    <Button />
+  );
 
   it('should exist', () => {
     expect(component).toMatchSnapshot();

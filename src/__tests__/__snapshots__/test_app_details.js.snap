@@ -1,3 +1,121 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AppDetails component should exist 1`] = `<AppDetails />`;
+exports[`AppDetails component should exist 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <AppDetails />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="app_name"
+>
+          Bucketlist
+</div>,
+        <div
+          className="app_description"
+>
+          Track Your Dreams
+</div>,
+      ],
+      "className": "app_details",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Bucketlist",
+          "className": "app_name",
+        },
+        "ref": null,
+        "rendered": "Bucketlist",
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Track Your Dreams",
+          "className": "app_description",
+        },
+        "ref": null,
+        "rendered": "Track Your Dreams",
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="app_name"
+>
+            Bucketlist
+</div>,
+          <div
+            className="app_description"
+>
+            Track Your Dreams
+</div>,
+        ],
+        "className": "app_details",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Bucketlist",
+            "className": "app_name",
+          },
+          "ref": null,
+          "rendered": "Bucketlist",
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Track Your Dreams",
+            "className": "app_description",
+          },
+          "ref": null,
+          "rendered": "Track Your Dreams",
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

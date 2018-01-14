@@ -4,7 +4,9 @@ import EmailInput from '../components/email_input';
 
 describe('EmailInput component', () => {
 
-  const component = <EmailInput />;
+  const component = shallow(
+    <EmailInput />
+  );
 
   it('should exist', () => {
     expect(component).toMatchSnapshot();

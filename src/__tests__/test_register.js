@@ -4,7 +4,9 @@ import RegisterView from '../components/register_view';
 
 describe('RegisterView component', () => {
 
-  const component = <RegisterView />;
+  const component = shallow(
+    <RegisterView />
+  );
 
   it('should exist', () => {
     expect(component).toMatchSnapshot();

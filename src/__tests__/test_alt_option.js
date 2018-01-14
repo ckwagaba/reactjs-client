@@ -4,7 +4,9 @@ import AltOption from '../components/alt_option';
 
 describe('AltOption component', () => {
 
-  const component = <AltOption />;
+  const component = shallow(
+    <AltOption />
+  );
 
   it('should exist', () => {
     expect(component).toMatchSnapshot();

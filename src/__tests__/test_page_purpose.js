@@ -4,7 +4,9 @@ import PagePurpose from '../components/page_purpose';
 
 describe('PagePurpose component', () => {
 
-  const component = <PagePurpose />;
+  const component = shallow(
+    <PagePurpose />
+  );
 
   it('should exist', () => {
     expect(component).toMatchSnapshot();

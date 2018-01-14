@@ -4,7 +4,9 @@ import Bucketlist from '../components/bucketlist';
 
 describe('Bucketlist component', () => {
 
-  const component = <Bucketlist />;
+  const component = shallow(
+    <Bucketlist />
+  );
 
   it('should exist', () => {
     expect(component).toMatchSnapshot();

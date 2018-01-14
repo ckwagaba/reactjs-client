@@ -4,7 +4,13 @@ import Footer from '../components/footer';
 
 describe('Footer component', () => {
 
-  const component = <Footer />;
+  const pagination = () => {
+    return true;
+  }
+
+  const component = shallow(
+    <Footer pagination={pagination} />
+  );
 
   it('should exist', () => {
     expect(component).toMatchSnapshot();
