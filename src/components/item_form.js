@@ -9,7 +9,8 @@ class ItemForm extends Component {
     super(props);
     this.state = {
       APIResponse: '',
-      name: ''
+      name: '',
+      buttonText: 'Add'
     }
   }
 
@@ -18,7 +19,8 @@ class ItemForm extends Component {
     if(this.props.match.params.itemName){
       this.setState(
         {
-          name: this.props.match.params.itemName
+          name: this.props.match.params.itemName,
+          buttonText: 'Update'
         }
       );
     }
@@ -97,7 +99,7 @@ class ItemForm extends Component {
           <form onSubmit={this.addItem}>
             <ServerResponse serverResponse={this.state.APIResponse} />
             <input type="text" className="text_input" placeholder="Item Name" value={this.state.name} onChange={this.handleNameInput} />
-            <SubmitButton buttonText="Submit" />
+            <SubmitButton buttonText={this.state.buttonText} />
           </form>
         </main>
       </div>

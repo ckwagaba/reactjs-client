@@ -26,16 +26,43 @@ class BucketlistView extends Component {
 
   // when component re-renders
   componentDidUpdate(prevProps, prevState) {
-    // get as required
+    // if the current page changes, or the search term changes.
     if(prevState.currentPage !== this.state.currentPage || prevState.searchTerm !== this.state.searchTerm) {
       this.getBucketlists();
     }
   }
 
-  // pagination
-  paginate = () => {
-    // first get total items
-    fetch('http://127.0.0.1:5000/v1/bucketlists/', {
+  // update currentPage
+  setCurrentPage = (currentPage) => {
+    this.setState({
+      currentPage: currentPage
+    });
+  }
+
+  // get bucketlists
+  getBucketlists = () => {
+    this.getTotalItems();
+    fetch('http://127.0.0.1:5000/v1/bucketlists/?q=' + this.state.searchTerm + '&limit=' + this.state.limit + '&page=' + this.state.currentPage, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': localStorage.getItem('ACCESSTOKEN')
+      }
+    })
+    .then(response => {
+      return response.json()
+    })
+    .then(responseData => {
+      this.setState({
+        listToRender: responseData.bucketlists_on_page,
+        totalPages: Math.ceil(this.state.totalItems / this.state.limit)
+      });
+    });
+  }
+
+  // get total items
+  getTotalItems = () => {
+    fetch('http://127.0.0.1:5000/v1/bucketlists/?q=' + this.state.searchTerm, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -49,45 +76,23 @@ class BucketlistView extends Component {
       this.setState({
         totalItems: responseData.number_of_bucketlists_on_page
       });
-      // get totalPages
-      if(this.state.totalItems > this.state.limit) {
-        this.setState({
-          totalPages: Math.ceil(this.state.totalItems / this.state.limit)
-        });
-      }
-    });
-  }
-
-  // update currentPage
-  setCurrentPage = (currentPage) => {
-    this.setState({
-      currentPage: currentPage
-    });
-  }
-
-  // get bucketlists
-  getBucketlists = () => {
-    fetch('http://127.0.0.1:5000/v1/bucketlists/?q=' + this.state.searchTerm + '&limit=' + this.state.limit + '&page=' + this.state.currentPage, {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': localStorage.getItem('ACCESSTOKEN')
-      }
-    })
-    .then(response => {
-      return response.json()
-    })
-    .then(responseData => {
-      this.setState({
-        listToRender: responseData.bucketlists_on_page
-      });
     });
   }
 
   // search API for items
   handleSearch = (event) => {
+    /*
+    NOTES
+    Neither Search nor pagination has a problem.
+    Seeing that they both depend on the limit,
+    pagination distributes the item between pages depending on the limit and the total items.
+    Having 3 items from a search, and a limit of 5 causes the second page to have nothing because they're all on the first page!
+    The solution is to re-render the pagination buttons depending on the search results.
+    Meaning we update the total number of items state variable after every search.
+    */
     this.setState({
-      searchTerm: event.target.value
+      searchTerm: event.target.value,
+      currentPage: 1 //this is a hack. needs a solution
     });
   }
 
@@ -108,7 +113,7 @@ class BucketlistView extends Component {
         <Nav handleLogout={this.props.handleLogout} />
         <Header currentLocation="Bucketlists" itemForm='/bucketlistform' searchTerm={this.state.searchTerm} handleSearch={this.handleSearch} />
         <Main componentToRender={rows} />
-        <Footer pagination={this.paginate} pageButtons={pageButtons} />
+        <Footer pageButtons={pageButtons} />
       </div>
     );
   }

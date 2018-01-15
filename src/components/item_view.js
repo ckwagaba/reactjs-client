@@ -32,32 +32,6 @@ class ItemView extends Component {
     }
   }
 
-  // pagination
-  paginate = () => {
-    // first get total items
-    fetch('http://127.0.0.1:5000/v1/bucketlists/' + this.props.match.params.bucketlistId + '/items/', {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': localStorage.getItem('ACCESSTOKEN')
-      }
-    })
-    .then(response => {
-      return response.json()
-    })
-    .then(responseData => {
-      this.setState({
-        totalItems: responseData.number_of_bucketlist_items_on_page
-      });
-      // get totalPages
-      if(this.state.totalItems > this.state.limit) {
-        this.setState({
-          totalPages: Math.ceil(this.state.totalItems / this.state.limit)
-        });
-      }
-    });
-  }
-
   // update currentPage
   setCurrentPage = (currentPage) => {
     this.setState({
@@ -67,6 +41,8 @@ class ItemView extends Component {
 
   // fetch bucketlist items
   getItems = () => {
+    console.log(this.state);
+    this.getTotalItems();
     fetch('http://127.0.0.1:5000/v1/bucketlists/' + this.props.match.params.bucketlistId + '/items/?q=' + this.state.searchTerm + '&limit=' + this.state.limit + '&page=' + this.state.currentPage, {
       method: 'GET',
       headers: {
@@ -92,8 +68,28 @@ class ItemView extends Component {
       .then(secondaryResponseData => {
         this.setState({
           listToRender: responseData.bucketlist_items_on_page,
-          bucketlistName: secondaryResponseData.name
+          bucketlistName: secondaryResponseData.name,
+          totalPages: Math.ceil(this.state.totalItems / this.state.limit)
         });
+      });
+    });
+  }
+
+  // get total items
+  getTotalItems = () => {
+    fetch('http://127.0.0.1:5000/v1/bucketlists/' + this.props.match.params.bucketlistId + '/items/?q=' + this.state.searchTerm, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': localStorage.getItem('ACCESSTOKEN')
+      }
+    })
+    .then(response => {
+      return response.json()
+    })
+    .then(responseData => {
+      this.setState({
+        totalItems: responseData.number_of_bucketlist_items_on_page
       });
     });
   }
@@ -101,7 +97,8 @@ class ItemView extends Component {
   // search API for items
   handleSearch = (event) => {
     this.setState({
-      searchTerm: event.target.value
+      searchTerm: event.target.value,
+      currentPage: 1 //this is a hack. needs a solution
     });
   }
 
@@ -124,7 +121,7 @@ class ItemView extends Component {
         <Nav handleLogout={this.props.handleLogout} />
         <Header currentLocation="Items" itemForm={'/itemform/' + this.props.match.params.bucketlistId} searchTerm={this.state.searchTerm} handleSearch={this.handleSearch} bucketlistName={this.state.bucketlistName} />
         <Main componentToRender={rows} />
-        <Footer pagination={this.paginate} pageButtons={pageButtons} />
+        <Footer pageButtons={pageButtons} />
       </div>
     );
   }
