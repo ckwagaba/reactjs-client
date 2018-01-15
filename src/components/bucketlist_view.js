@@ -42,7 +42,6 @@ class BucketlistView extends Component {
   // get bucketlists
   getBucketlists = () => {
     this.getTotalItems();
-    console.log(this.state);
     fetch('http://127.0.0.1:5000/v1/bucketlists/?q=' + this.state.searchTerm + '&limit=' + this.state.limit + '&page=' + this.state.currentPage, {
       method: 'GET',
       headers: {
