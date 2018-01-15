@@ -13,6 +13,7 @@ class RegisterView extends Component {
     this.state = {
       email: '',
       password: '',
+      confirmPassword: '',
       APIResponse: ''
     }
   }
@@ -35,32 +36,50 @@ class RegisterView extends Component {
     );
   }
 
+  // confirm password
+  handleConfirmPasswordChange = (event) => {
+    this.setState({
+      confirmPassword: event.target.value
+    });
+  }
+
   // create new user
   createUser = (event) => {
     event.preventDefault();
-    const requestData = {
-      'email': this.state.email,
-      'password': this.state.password
-    }
-    fetch('http://127.0.0.1:5000/v1/auth/register', {
-      method: 'POST',
-      body: JSON.stringify(requestData),
-      headers: {
-        'Content-Type': 'application/json'
+    // if passwords match
+    if (this.state.password === this.state.confirmPassword) {
+      const requestData = {
+        'email': this.state.email,
+        'password': this.state.password
       }
-    })
-    .then(response => {
-      return response.json()
-    })
-    .then(responseData => {
+      fetch('http://127.0.0.1:5000/v1/auth/register', {
+        method: 'POST',
+        body: JSON.stringify(requestData),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
+      .then(response => {
+        return response.json()
+      })
+      .then(responseData => {
+        this.setState(
+          {
+            APIResponse: responseData.message,
+            'email': '',
+            'password': ''
+          }
+        );
+      });
+    }
+    // passwords do not match
+    else {
       this.setState(
         {
-          APIResponse: responseData.message,
-          'email': '',
-          'password': ''
+          APIResponse: 'Passwords should match'
         }
       );
-    });
+    }
   }
 
   render () {
@@ -73,6 +92,7 @@ class RegisterView extends Component {
           <form onSubmit={this.createUser}>
             <EmailInput placeholder="Email Address" value={this.state.email} handleInput={this.handleEmailChange} />
             <PasswordInput placeholder="New Password" value={this.state.password} handleInput={this.handlePasswordChange} />
+            <PasswordInput placeholder="Confirm Password" value={this.state.confirmPassword} handleInput={this.handleConfirmPasswordChange} />
             <SubmitButton buttonText="Sign Up" />
           </form>
           <AltOption altOptionLink="/auth/login" altOptionText="Sign In" />

@@ -41,6 +41,11 @@ ShallowWrapper {
                               placeholder="New Password"
                               value=""
                     />
+                    <PasswordInput
+                              handleInput={[Function]}
+                              placeholder="Confirm Password"
+                              value=""
+                    />
                     <SubmitButton
                               buttonText="Sign Up"
                     />
@@ -87,6 +92,11 @@ ShallowWrapper {
               <PasswordInput
                             handleInput={[Function]}
                             placeholder="New Password"
+                            value=""
+              />
+              <PasswordInput
+                            handleInput={[Function]}
+                            placeholder="Confirm Password"
                             value=""
               />
               <SubmitButton
@@ -140,6 +150,11 @@ ShallowWrapper {
                   placeholder="New Password"
                   value=""
 />,
+                <PasswordInput
+                  handleInput={[Function]}
+                  placeholder="Confirm Password"
+                  value=""
+/>,
                 <SubmitButton
                   buttonText="Sign Up"
 />,
@@ -168,6 +183,19 @@ ShallowWrapper {
                 "props": Object {
                   "handleInput": [Function],
                   "placeholder": "New Password",
+                  "value": "",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "handleInput": [Function],
+                  "placeholder": "Confirm Password",
                   "value": "",
                 },
                 "ref": null,
@@ -236,6 +264,11 @@ ShallowWrapper {
                                     placeholder="New Password"
                                     value=""
                         />
+                        <PasswordInput
+                                    handleInput={[Function]}
+                                    placeholder="Confirm Password"
+                                    value=""
+                        />
                         <SubmitButton
                                     buttonText="Sign Up"
                         />
@@ -282,6 +315,11 @@ ShallowWrapper {
                 <PasswordInput
                                 handleInput={[Function]}
                                 placeholder="New Password"
+                                value=""
+                />
+                <PasswordInput
+                                handleInput={[Function]}
+                                placeholder="Confirm Password"
                                 value=""
                 />
                 <SubmitButton
@@ -335,6 +373,11 @@ ShallowWrapper {
                     placeholder="New Password"
                     value=""
 />,
+                  <PasswordInput
+                    handleInput={[Function]}
+                    placeholder="Confirm Password"
+                    value=""
+/>,
                   <SubmitButton
                     buttonText="Sign Up"
 />,
@@ -363,6 +406,19 @@ ShallowWrapper {
                   "props": Object {
                     "handleInput": [Function],
                     "placeholder": "New Password",
+                    "value": "",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "handleInput": [Function],
+                    "placeholder": "Confirm Password",
                     "value": "",
                   },
                   "ref": null,
