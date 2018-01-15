@@ -9,7 +9,8 @@ class BucketlistForm extends Component {
     super(props);
     this.state = {
       APIResponse: '',
-      name: ''
+      name: '',
+      buttonText: 'Add'
     }
   }
 
@@ -18,7 +19,8 @@ componentDidMount() {
   if(this.props.match.params.bucketlistName){
     this.setState(
       {
-        name: this.props.match.params.bucketlistName
+        name: this.props.match.params.bucketlistName,
+        buttonText: 'Update'
       }
     );
   }
@@ -97,7 +99,7 @@ componentDidMount() {
           <form onSubmit={this.addBucketlist}>
             <ServerResponse serverResponse={this.state.APIResponse} />
             <input type="text" className="text_input" placeholder="Bucketlist Name" value={this.state.name} onChange={this.handleNameInput} />
-            <SubmitButton buttonText="Submit" />
+            <SubmitButton buttonText={this.state.buttonText} />
           </form>
         </main>
       </div>

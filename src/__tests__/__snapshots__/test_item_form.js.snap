@@ -45,7 +45,7 @@ exports[`ItemForm component should exist 1`] = `
         value="career"
       />
       <SubmitButton
-        buttonText="Submit"
+        buttonText="Update"
       />
     </form>
   </main>
