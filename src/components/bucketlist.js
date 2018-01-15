@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from './button';
 import { Link, withRouter } from 'react-router-dom';
+import { BASEURL } from '../config.js';
 
 const Bucketlist = (props) => {
   // redirect to bucketlist form
@@ -10,7 +11,7 @@ const Bucketlist = (props) => {
 
   // handle bucketlist delete
   const handleDelete = (bucketlistId) => {
-    fetch('http://127.0.0.1:5000/v1/bucketlists/' + props.bucketlistId, {
+    fetch(BASEURL + '/bucketlists/' + props.bucketlistId, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
