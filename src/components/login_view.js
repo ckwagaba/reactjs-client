@@ -6,6 +6,7 @@ import EmailInput from './email_input';
 import SubmitButton from './submit_button';
 import PasswordInput from './password_input';
 import AltOption from './alt_option';
+import { BASEURL } from '../config.js';
 
 class LoginView extends Component {
   constructor(props) {
@@ -42,7 +43,7 @@ class LoginView extends Component {
       'email': this.state.email,
       'password': this.state.password
     }
-    fetch('http://127.0.0.1:5000/v1/auth/login', {
+    fetch(BASEURL + '/auth/login', {
       method: 'POST',
       body: JSON.stringify(requestData),
       headers: {

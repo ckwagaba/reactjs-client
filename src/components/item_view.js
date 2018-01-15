@@ -4,6 +4,7 @@ import Header from './header';
 import Main from './main';
 import Item from './item';
 import Footer from './footer';
+import { BASEURL } from '../config.js';
 
 class ItemView extends Component {
   constructor(props) {
@@ -41,9 +42,8 @@ class ItemView extends Component {
 
   // fetch bucketlist items
   getItems = () => {
-    console.log(this.state);
     this.getTotalItems();
-    fetch('http://127.0.0.1:5000/v1/bucketlists/' + this.props.match.params.bucketlistId + '/items/?q=' + this.state.searchTerm + '&limit=' + this.state.limit + '&page=' + this.state.currentPage, {
+    fetch(BASEURL + '/bucketlists/' + this.props.match.params.bucketlistId + '/items/?q=' + this.state.searchTerm + '&limit=' + this.state.limit + '&page=' + this.state.currentPage, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -55,7 +55,7 @@ class ItemView extends Component {
     })
     .then(responseData => {
       // get bucketlist name
-      fetch('http://127.0.0.1:5000/v1/bucketlists/' + this.props.match.params.bucketlistId, {
+      fetch(BASEURL + '/bucketlists/' + this.props.match.params.bucketlistId, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -77,7 +77,7 @@ class ItemView extends Component {
 
   // get total items
   getTotalItems = () => {
-    fetch('http://127.0.0.1:5000/v1/bucketlists/' + this.props.match.params.bucketlistId + '/items/?q=' + this.state.searchTerm, {
+    fetch(BASEURL + '/bucketlists/' + this.props.match.params.bucketlistId + '/items/?q=' + this.state.searchTerm, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',

@@ -4,6 +4,7 @@ import Header from './header';
 import Main from './main';
 import Footer from './footer';
 import Bucketlist from './bucketlist';
+import { BASEURL } from '../config.js';
 
 class BucketlistView extends Component {
   constructor(props) {
@@ -42,7 +43,7 @@ class BucketlistView extends Component {
   // get bucketlists
   getBucketlists = () => {
     this.getTotalItems();
-    fetch('http://127.0.0.1:5000/v1/bucketlists/?q=' + this.state.searchTerm + '&limit=' + this.state.limit + '&page=' + this.state.currentPage, {
+    fetch(BASEURL + '/bucketlists/?q=' + this.state.searchTerm + '&limit=' + this.state.limit + '&page=' + this.state.currentPage, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -62,7 +63,7 @@ class BucketlistView extends Component {
 
   // get total items
   getTotalItems = () => {
-    fetch('http://127.0.0.1:5000/v1/bucketlists/?q=' + this.state.searchTerm, {
+    fetch(BASEURL + '/bucketlists/?q=' + this.state.searchTerm, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
