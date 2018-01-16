@@ -1,1 +1,1 @@
-export const BASEURL = 'https://ckwagaba-flask-api.herokuapp.com';
+export const BASEURL = 'https://ckwagaba-flask-api.herokuapp.com/v1';
