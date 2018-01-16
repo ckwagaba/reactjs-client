@@ -3,6 +3,7 @@ import Nav from './nav';
 import SubmitButton from './submit_button';
 import { Link } from 'react-router-dom';
 import ServerResponse from './server_response';
+import { BASEURL } from '../config.js';
 
 class BucketlistForm extends Component {
   constructor(props) {
@@ -70,14 +71,14 @@ componentDidMount() {
     const requestData = {
       'name': this.state.name
     };
-    const BASEURL = 'http://127.0.0.1:5000/v1/bucketlists/';
+    const ENDPOINT = BASEURL + '/bucketlists/';
     // for an update
     if(this.props.match.params.bucketlistId){
-      this.createOrUpdateBucketlist(requestData, BASEURL + this.props.match.params.bucketlistId, 'PUT');
+      this.createOrUpdateBucketlist(requestData, ENDPOINT + this.props.match.params.bucketlistId, 'PUT');
     }
     // for a creation
     else {
-      this.createOrUpdateBucketlist(requestData, BASEURL, 'POST');
+      this.createOrUpdateBucketlist(requestData, ENDPOINT, 'POST');
     }
   }
 

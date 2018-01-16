@@ -3,6 +3,7 @@ import Nav from './nav';
 import SubmitButton from './submit_button';
 import { Link } from 'react-router-dom';
 import ServerResponse from './server_response';
+import { BASEURL } from '../config.js';
 
 class ItemForm extends Component {
   constructor(props) {
@@ -70,14 +71,14 @@ class ItemForm extends Component {
     const requestData = {
       'name': this.state.name
     }
-    const BASEURL = 'http://127.0.0.1:5000/v1/bucketlists/' + this.props.match.params.bucketlistId + '/items/';
+    const ENDPOINT = BASEURL + '/bucketlists/' + this.props.match.params.bucketlistId + '/items/';
     // for an update
     if(this.props.match.params.itemId){
-      this.createOrUpdateItem(requestData, BASEURL + this.props.match.params.itemId, 'PUT');
+      this.createOrUpdateItem(requestData, ENDPOINT + this.props.match.params.itemId, 'PUT');
     }
     // for a creation
     else {
-      this.createOrUpdateItem(requestData, BASEURL, 'POST');
+      this.createOrUpdateItem(requestData, ENDPOINT, 'POST');
     }
   }
 
