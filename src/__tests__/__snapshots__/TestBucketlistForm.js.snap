@@ -1,0 +1,574 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BucketlistForm component should exist 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <BucketlistForm
+    history="/bucketlists/"
+    match={
+        Object {
+            "params": Object {
+              "bucketlistId": 1,
+              "itemId": 1,
+              "itemName": "career",
+            },
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <withRouter(Nav)
+          handleLogout={undefined}
+/>,
+        <header>
+          <div
+                    className="header_left"
+          >
+                    <span>
+                              Bucketlist
+                    </span>
+          </div>
+          <div
+                    className="header_right"
+          >
+                    <Link
+                              replace={false}
+                              to="/bucketlists/"
+                    >
+                              <div
+                                        className="round_button cancel_button"
+                              >
+                                        +
+                              </div>
+                    </Link>
+          </div>
+</header>,
+        <main
+          className="entry_form"
+>
+          <form
+                    onSubmit={[Function]}
+          >
+                    <ServerResponse
+                              serverResponse=""
+                    />
+                    <input
+                              className="text_input"
+                              onChange={[Function]}
+                              placeholder="Bucketlist Name"
+                              type="text"
+                              value=""
+                    />
+                    <SubmitButton
+                              buttonText="Add"
+                    />
+          </form>
+</main>,
+      ],
+      "className": "landing_page bucketlist_view",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "handleLogout": undefined,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="header_left"
+>
+              <span>
+                            Bucketlist
+              </span>
+</div>,
+            <div
+              className="header_right"
+>
+              <Link
+                            replace={false}
+                            to="/bucketlists/"
+              >
+                            <div
+                                          className="round_button cancel_button"
+                            >
+                                          +
+                            </div>
+              </Link>
+</div>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <span>
+                Bucketlist
+</span>,
+              "className": "header_left",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Bucketlist",
+              },
+              "ref": null,
+              "rendered": "Bucketlist",
+              "type": "span",
+            },
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <Link
+                replace={false}
+                to="/bucketlists/"
+>
+                <div
+                                className="round_button cancel_button"
+                >
+                                +
+                </div>
+</Link>,
+              "className": "header_right",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": <div
+                  className="round_button cancel_button"
+>
+                  +
+</div>,
+                "replace": false,
+                "to": "/bucketlists/",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "+",
+                  "className": "round_button cancel_button",
+                },
+                "ref": null,
+                "rendered": "+",
+                "type": "div",
+              },
+              "type": [Function],
+            },
+            "type": "div",
+          },
+        ],
+        "type": "header",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <form
+            onSubmit={[Function]}
+>
+            <ServerResponse
+                        serverResponse=""
+            />
+            <input
+                        className="text_input"
+                        onChange={[Function]}
+                        placeholder="Bucketlist Name"
+                        type="text"
+                        value=""
+            />
+            <SubmitButton
+                        buttonText="Add"
+            />
+</form>,
+          "className": "entry_form",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <ServerResponse
+                serverResponse=""
+/>,
+              <input
+                className="text_input"
+                onChange={[Function]}
+                placeholder="Bucketlist Name"
+                type="text"
+                value=""
+/>,
+              <SubmitButton
+                buttonText="Add"
+/>,
+            ],
+            "onSubmit": [Function],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "serverResponse": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "text_input",
+                "onChange": [Function],
+                "placeholder": "Bucketlist Name",
+                "type": "text",
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "buttonText": "Add",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "form",
+        },
+        "type": "main",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <withRouter(Nav)
+            handleLogout={undefined}
+/>,
+          <header>
+            <div
+                        className="header_left"
+            >
+                        <span>
+                                    Bucketlist
+                        </span>
+            </div>
+            <div
+                        className="header_right"
+            >
+                        <Link
+                                    replace={false}
+                                    to="/bucketlists/"
+                        >
+                                    <div
+                                                className="round_button cancel_button"
+                                    >
+                                                +
+                                    </div>
+                        </Link>
+            </div>
+</header>,
+          <main
+            className="entry_form"
+>
+            <form
+                        onSubmit={[Function]}
+            >
+                        <ServerResponse
+                                    serverResponse=""
+                        />
+                        <input
+                                    className="text_input"
+                                    onChange={[Function]}
+                                    placeholder="Bucketlist Name"
+                                    type="text"
+                                    value=""
+                        />
+                        <SubmitButton
+                                    buttonText="Add"
+                        />
+            </form>
+</main>,
+        ],
+        "className": "landing_page bucketlist_view",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "handleLogout": undefined,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="header_left"
+>
+                <span>
+                                Bucketlist
+                </span>
+</div>,
+              <div
+                className="header_right"
+>
+                <Link
+                                replace={false}
+                                to="/bucketlists/"
+                >
+                                <div
+                                                className="round_button cancel_button"
+                                >
+                                                +
+                                </div>
+                </Link>
+</div>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <span>
+                  Bucketlist
+</span>,
+                "className": "header_left",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Bucketlist",
+                },
+                "ref": null,
+                "rendered": "Bucketlist",
+                "type": "span",
+              },
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <Link
+                  replace={false}
+                  to="/bucketlists/"
+>
+                  <div
+                                    className="round_button cancel_button"
+                  >
+                                    +
+                  </div>
+</Link>,
+                "className": "header_right",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": <div
+                    className="round_button cancel_button"
+>
+                    +
+</div>,
+                  "replace": false,
+                  "to": "/bucketlists/",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "+",
+                    "className": "round_button cancel_button",
+                  },
+                  "ref": null,
+                  "rendered": "+",
+                  "type": "div",
+                },
+                "type": [Function],
+              },
+              "type": "div",
+            },
+          ],
+          "type": "header",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <form
+              onSubmit={[Function]}
+>
+              <ServerResponse
+                            serverResponse=""
+              />
+              <input
+                            className="text_input"
+                            onChange={[Function]}
+                            placeholder="Bucketlist Name"
+                            type="text"
+                            value=""
+              />
+              <SubmitButton
+                            buttonText="Add"
+              />
+</form>,
+            "className": "entry_form",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <ServerResponse
+                  serverResponse=""
+/>,
+                <input
+                  className="text_input"
+                  onChange={[Function]}
+                  placeholder="Bucketlist Name"
+                  type="text"
+                  value=""
+/>,
+                <SubmitButton
+                  buttonText="Add"
+/>,
+              ],
+              "onSubmit": [Function],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "serverResponse": "",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "text_input",
+                  "onChange": [Function],
+                  "placeholder": "Bucketlist Name",
+                  "type": "text",
+                  "value": "",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "input",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "buttonText": "Add",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
+            "type": "form",
+          },
+          "type": "main",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
