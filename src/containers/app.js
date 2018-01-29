@@ -1,12 +1,12 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import '../css/main.css';
-import RegisterView from '../components/register_view';
-import LoginView from '../components/login_view';
-import BucketlistView from '../components/bucketlist_view';
-import ItemView from '../components/item_view';
-import BucketlistForm from '../components/bucketlist_form';
-import ItemForm from '../components/item_form';
+import RegisterView from '../components/RegisterView';
+import LoginView from '../components/LoginView';
+import BucketlistView from '../components/BucketlistView';
+import ItemView from '../components/ItemView';
+import BucketlistForm from '../components/BucketlistForm';
+import ItemForm from '../components/ItemForm';
 
 const App = (props) =>  {
     // access protected routes: apparently localStorage does not accept BOOLEANS

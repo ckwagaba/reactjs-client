@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import Nav from './nav';
-import Header from './header';
-import Main from './main';
-import Footer from './footer';
-import Bucketlist from './bucketlist';
-import { BASEURL } from '../config.js';
+import Nav from './Nav';
+import Header from './Header';
+import Main from './Main';
+import Footer from './Footer';
+import Bucketlist from './Bucketlist';
+import { BASEURL } from '../Config.js';
 
 class BucketlistView extends Component {
   constructor(props) {

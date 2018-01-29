@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import PagePurpose from './page_purpose';
-import ServerResponse from './server_response';
-import AppDetails from './app_details';
-import EmailInput from './email_input';
-import SubmitButton from './submit_button';
-import PasswordInput from './password_input';
-import AltOption from './alt_option';
-import { BASEURL } from '../config.js';
+import PagePurpose from './PagePurpose';
+import ServerResponse from './ServerResponse';
+import AppDetails from './AppDetails';
+import EmailInput from './EmailInput';
+import SubmitButton from './SubmitButton';
+import PasswordInput from './PasswordInput';
+import AltOption from './AltOption';
+import { BASEURL } from '../Config.js';
 
 class RegisterView extends Component {
   constructor(props) {

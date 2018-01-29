@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import Nav from './nav';
-import SubmitButton from './submit_button';
 import { Link } from 'react-router-dom';
-import ServerResponse from './server_response';
-import { BASEURL } from '../config.js';
+import Nav from './Nav';
+import SubmitButton from './SubmitButton';
+import ServerResponse from './ServerResponse';
+import { BASEURL } from '../Config.js';
 
 class BucketlistForm extends Component {
   constructor(props) {

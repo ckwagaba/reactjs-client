@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import Nav from './nav';
-import Header from './header';
-import Main from './main';
-import Item from './item';
-import Footer from './footer';
-import { BASEURL } from '../config.js';
+import Nav from './Nav';
+import Header from './Header';
+import Main from './Main';
+import Item from './Item';
+import Footer from './Footer';
+import { BASEURL } from '../Config.js';
 
 class ItemView extends Component {
   constructor(props) {

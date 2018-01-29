@@ -1,7 +1,7 @@
 import React from 'react';
-import Button from './button';
 import { withRouter } from 'react-router-dom';
-import { BASEURL } from '../config.js';
+import Button from './Button';
+import { BASEURL } from '../Config.js';
 
 const Item = (props) => {
   // redirect to bucketlist form

@@ -1,6 +1,6 @@
 import React from 'react';
-import SearchBar from './search_bar';
 import { Link } from 'react-router-dom';
+import SearchBar from './SearchBar';
 
 const Header = (props) => {
   return (
