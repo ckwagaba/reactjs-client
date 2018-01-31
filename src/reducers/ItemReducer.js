@@ -10,14 +10,14 @@ const initialState = {
 
 const itemReducer = (state=initialState, action) => {
   switch(action.type) {
-    case 'STORE_ITEMS':
+    case 'STORE_LIST':
       return {
         ...state,
         listToRender: action.payload.listToRender,
         bucketlistName: action.payload.bucketlistName,
         totalPages: action.payload.totalPages
       }
-    case 'SET_TOTAL_ITEMS':
+    case 'SET_TOTAL':
       return {
         ...state,
         totalItems: action.payload
