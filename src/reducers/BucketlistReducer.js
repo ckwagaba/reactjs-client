@@ -8,15 +8,15 @@ const initialState = {
 };
 
 const bucketlistReducer = (state=initialState, action) => {
-  switch (action.type) {
-    case 'STORE_BUCKETLISTS':
+  switch(action.type) {
+    case 'STORE_LIST':
       return {
         ...state,
         listToRender: action.payload.listToRender,
         totalPages: action.payload.totalPages
       }
 
-    case 'SET_TOTAL_BUCKETLISTS':
+    case 'SET_TOTAL':
       return {
         ...state,
         totalItems: action.payload
