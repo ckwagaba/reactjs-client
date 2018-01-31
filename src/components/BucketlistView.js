@@ -7,6 +7,7 @@ import Footer from './Footer';
 import Bucketlist from './Bucketlist';
 import { BASEURL } from '../Config.js';
 import store from '../store/Store';
+import * as ActionTypes from '../actions/ActionTypes'
 
 class BucketlistView extends Component {
   // initial component render
@@ -16,7 +17,7 @@ class BucketlistView extends Component {
   }
 
   // when component re-renders
-  componentDidUpdate(prevProps) {
+  componentDidUpdate(prevProps , prevState) {
     // if the current page changes, or the search term changes.
     if(prevProps.bucketlistState.currentPage !== this.props.bucketlistState.currentPage || prevProps.bucketlistState.searchTerm !== this.props.bucketlistState.searchTerm) {
       this.getBucketlists();
@@ -26,7 +27,7 @@ class BucketlistView extends Component {
   // update currentPage
   setCurrentPage = (currentPage) => {
     store.dispatch({
-      type: 'SET_CURRENT_PAGE',
+      type: ActionTypes.SET_CURRENT_PAGE,
       payload: currentPage
     });
   }
@@ -46,7 +47,7 @@ class BucketlistView extends Component {
     })
     .then(responseData => {
       store.dispatch({
-        type: 'STORE_BUCKETLISTS',
+        type: ActionTypes.STORE_LIST,
         payload: {
           listToRender: responseData.bucketlists_on_page,
           totalPages: Math.ceil(this.props.bucketlistState.totalItems / this.props.bucketlistState.limit)
@@ -69,7 +70,7 @@ class BucketlistView extends Component {
     })
     .then(responseData => {
       store.dispatch({
-        type: 'SET_TOTAL_BUCKETLISTS',
+        type: ActionTypes.SET_TOTAL,
         payload: responseData.number_of_bucketlists_on_page
       });
     });
@@ -78,7 +79,7 @@ class BucketlistView extends Component {
   // search API for items
   handleSearch = (event) => {
     store.dispatch({
-      type: 'SET_SEARCH_TERM',
+      type: ActionTypes.SET_SEARCH_TERM,
       payload: {
         searchTerm: event.target.value,
         currentPage: 1 //this is a hack. needs a solution
