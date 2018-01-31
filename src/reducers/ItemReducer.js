@@ -10,26 +10,26 @@ const initialState = {
 
 const itemReducer = (state=initialState, action) => {
   switch(action.type) {
-    case 'STORE_LIST':
+    case 'STORE_BUCKETLIST_ITEMS':
       return {
         ...state,
         listToRender: action.payload.listToRender,
         bucketlistName: action.payload.bucketlistName,
         totalPages: action.payload.totalPages
       }
-    case 'SET_TOTAL':
+    case 'SET_ITEM_TOTAL':
       return {
         ...state,
         totalItems: action.payload
       }
 
-    case 'SET_CURRENT_PAGE':
+    case 'SET_ITEM_CURRENT_PAGE':
       return {
         ...state,
         currentPage: action.payload
       }
 
-    case 'SET_SEARCH_TERM':
+    case 'SET_ITEM_SEARCH_TERM':
       return {
         ...state,
         searchTerm: action.payload.searchTerm,

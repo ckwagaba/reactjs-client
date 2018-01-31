@@ -26,7 +26,7 @@ class ItemView extends Component {
   // update currentPage
   setCurrentPage = (currentPage) => {
     store.dispatch({
-      type: ActionTypes.SET_CURRENT_PAGE,
+      type: ActionTypes.SET_ITEM_CURRENT_PAGE,
       payload: currentPage
     });
   }
@@ -58,7 +58,7 @@ class ItemView extends Component {
       })
       .then(secondaryResponseData => {
         store.dispatch({
-          type: ActionTypes.STORE_LIST,
+          type: ActionTypes.STORE_BUCKETLIST_ITEMS,
           payload: {
             listToRender: responseData.bucketlist_items_on_page,
             bucketlistName: secondaryResponseData.name,
@@ -83,7 +83,7 @@ class ItemView extends Component {
     })
     .then(responseData => {
       store.dispatch({
-        type: ActionTypes.SET_TOTAL,
+        type: ActionTypes.SET_ITEM_TOTAL,
         payload: responseData.number_of_bucketlist_items_on_page
       });
     });
@@ -92,7 +92,7 @@ class ItemView extends Component {
   // search API for items
   handleSearch = (event) => {
     store.dispatch({
-      type: ActionTypes.SET_SEARCH_TERM,
+      type: ActionTypes.SET_ITEM_SEARCH_TERM,
       payload: {
         searchTerm: event.target.value,
         currentPage: 1 //this is a hack. needs a solution
