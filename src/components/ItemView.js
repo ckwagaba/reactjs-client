@@ -18,7 +18,7 @@ class ItemView extends Component {
   // when component re-renders
   componentDidUpdate(prevProps , prevState) {
     // get as required
-    if(prevProps.currentPage !== this.props.itemState.currentPage || prevProps.searchTerm !== this.props.itemState.searchTerm) {
+    if(prevProps.itemState.currentPage !== this.props.itemState.currentPage || prevProps.itemState.searchTerm !== this.props.itemState.searchTerm) {
       this.getItems();
     }
   }
