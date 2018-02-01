@@ -39,7 +39,7 @@ class BucketlistView extends Component {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': localStorage.getItem('ACCESSTOKEN')
+        'Authorization': store.getState().authView.ACCESSTOKEN
       }
     })
     .then(response => {
@@ -62,7 +62,7 @@ class BucketlistView extends Component {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': localStorage.getItem('ACCESSTOKEN')
+        'Authorization': store.getState().authView.ACCESSTOKEN
       }
     })
     .then(response => {

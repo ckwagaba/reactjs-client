@@ -38,7 +38,7 @@ class ItemView extends Component {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': localStorage.getItem('ACCESSTOKEN')
+        'Authorization': store.getState().authView.ACCESSTOKEN
       }
     })
     .then(response => {
@@ -50,7 +50,7 @@ class ItemView extends Component {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': localStorage.getItem('ACCESSTOKEN')
+          'Authorization': store.getState().authView.ACCESSTOKEN
         }
       })
       .then(secondaryResponse => {
@@ -75,7 +75,7 @@ class ItemView extends Component {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': localStorage.getItem('ACCESSTOKEN')
+        'Authorization': store.getState().authView.ACCESSTOKEN
       }
     })
     .then(response => {

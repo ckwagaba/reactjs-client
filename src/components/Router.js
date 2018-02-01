@@ -6,10 +6,11 @@ import BucketlistView from '../components/BucketlistView';
 import ItemView from '../components/ItemView';
 import BucketlistForm from '../components/BucketlistForm';
 import ItemForm from '../components/ItemForm';
+import store from '../store/Store';
 
 const Router = () => {
   // access protected routes: apparently localStorage does not accept BOOLEANS
-  if (localStorage.getItem('userHasAuthenticated') === 'true') {
+  if (store.getState().authView.userHasAuthenticated === true) {
     return (
       <Switch>
         <Route exact path='/bucketlists/' component={BucketlistView} />

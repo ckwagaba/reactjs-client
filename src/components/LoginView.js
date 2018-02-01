@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import PagePurpose from './PagePurpose';
 import ServerResponse from './ServerResponse';
 import AppDetails from './AppDetails';
@@ -7,6 +8,8 @@ import SubmitButton from './SubmitButton';
 import PasswordInput from './PasswordInput';
 import AltOption from './AltOption';
 import { BASEURL } from '../Config.js';
+import store from '../store/Store';
+import * as ActionTypes from '../actions/ActionTypes'
 
 class LoginView extends Component {
   constructor(props) {
@@ -56,12 +59,15 @@ class LoginView extends Component {
     .then(responseData => {
       // on successful login
       if(responseData.access_token){
-        // local storage of ACCESSTOKEN and userName
-        localStorage.setItem('ACCESSTOKEN', responseData.access_token);
-        localStorage.setItem('userHasAuthenticated', true);
-        // get first part of email
-        localStorage.setItem('userName', this.state.email.split('@')[0]);
-        // clear form
+        // store ACCESSTOKEN in redux store
+        store.dispatch({
+          type: ActionTypes.STORE_ACCESSTOKEN,
+          payload: {
+            ACCESSTOKEN: responseData.access_token,
+            userName: this.state.email.split('@')[0],
+            userHasAuthenticated: true
+          }
+        });
         this.setState(
           {
             email: '',
@@ -102,4 +108,10 @@ class LoginView extends Component {
   }
 }
 
-export default LoginView;
+const mapStateToProps = (store) => {
+  return {
+    authState: store.authView
+  }
+}
+
+export default connect(mapStateToProps)(LoginView);
