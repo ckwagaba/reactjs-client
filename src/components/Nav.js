@@ -1,13 +1,20 @@
 import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
+import store from '../store/Store';
+import * as ActionTypes from '../actions/ActionTypes'
 
 class Nav extends Component {
   // handle logout
   handleLogout = (event) => {
-    // reset ACCESSTOKEN and userName in local storage
-    localStorage.setItem('ACCESSTOKEN', '');
-    localStorage.setItem('userHasAuthenticated', false);
-    localStorage.setItem('userName', '');
+    // reset ACCESSTOKEN and userName in Redux store
+    store.dispatch({
+      type: ActionTypes.STORE_ACCESSTOKEN,
+      payload: {
+        ACCESSTOKEN: '',
+        userName: '',
+        userHasAuthenticated: false
+      }
+    });
     this.props.history.push('/auth/login');
   }
 
@@ -21,7 +28,7 @@ class Nav extends Component {
         </div>
         <div className="nav_options">
           <ul className="menu">
-            <li className="username">{localStorage.getItem('userName')}</li>
+            <li className="username">{store.getState().authView.userName}</li>
             <li onClick={this.handleLogout} className="logout_button">Logout</li>
           </ul>
         </div>
