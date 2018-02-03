@@ -4,7 +4,7 @@ exports[`ItemView component should exist 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <ItemView
+  Symbol(enzyme.__unrendered__): <Connect(ItemView)
     history="/bucketlists/"
     match={
         Object {
@@ -13,6 +13,15 @@ ShallowWrapper {
               "itemId": 1,
               "itemName": "career",
             },
+          }
+    }
+    store={
+        Object {
+            "dispatch": [Function],
+            "getState": [Function],
+            "replaceReducer": [Function],
+            "subscribe": [Function],
+            Symbol(observable): [Function],
           }
     }
 />,
@@ -26,191 +35,109 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "host",
+    "nodeType": "class",
     "props": Object {
-      "children": Array [
-        <withRouter(Nav)
-          handleLogout={undefined}
-/>,
-        <Header
-          bucketlistName=""
-          currentLocation="Items"
-          handleSearch={[Function]}
-          itemForm="/itemform/1"
-          searchTerm=""
-/>,
-        <Main
-          componentToRender={Array []}
-/>,
-        <Footer
-          pageButtons={
-                    Array [
-                              <span
-                                className="page_button"
-                                onClick={[Function]}
-                    >
-                                1
-                    </span>,
-                            ]
-          }
-/>,
-      ],
-      "className": "landing_page item_view",
+      "dispatch": [Function],
+      "history": "/bucketlists/",
+      "itemState": Object {
+        "bucketlistName": "",
+        "currentPage": 1,
+        "limit": 3,
+        "listToRender": Array [],
+        "searchTerm": "",
+        "totalItems": 0,
+        "totalPages": 1,
+      },
+      "match": Object {
+        "params": Object {
+          "bucketlistId": 1,
+          "itemId": 1,
+          "itemName": "career",
+        },
+      },
+      "store": Object {
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+        Symbol(observable): [Function],
+      },
+      "storeSubscription": Subscription {
+        "listeners": Object {
+          "clear": [Function],
+          "get": [Function],
+          "notify": [Function],
+          "subscribe": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "dispatch": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+          Symbol(observable): [Function],
+        },
+        "unsubscribe": [Function],
+      },
     },
     "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "handleLogout": undefined,
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "bucketlistName": "",
-          "currentLocation": "Items",
-          "handleSearch": [Function],
-          "itemForm": "/itemform/1",
-          "searchTerm": "",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "componentToRender": Array [],
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "pageButtons": Array [
-            <span
-              className="page_button"
-              onClick={[Function]}
->
-              1
-</span>,
-          ],
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-    ],
-    "type": "div",
+    "rendered": null,
+    "type": [Function],
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "host",
+      "nodeType": "class",
       "props": Object {
-        "children": Array [
-          <withRouter(Nav)
-            handleLogout={undefined}
-/>,
-          <Header
-            bucketlistName=""
-            currentLocation="Items"
-            handleSearch={[Function]}
-            itemForm="/itemform/1"
-            searchTerm=""
-/>,
-          <Main
-            componentToRender={Array []}
-/>,
-          <Footer
-            pageButtons={
-                        Array [
-                                    <span
-                                      className="page_button"
-                                      onClick={[Function]}
-                        >
-                                      1
-                        </span>,
-                                  ]
-            }
-/>,
-        ],
-        "className": "landing_page item_view",
+        "dispatch": [Function],
+        "history": "/bucketlists/",
+        "itemState": Object {
+          "bucketlistName": "",
+          "currentPage": 1,
+          "limit": 3,
+          "listToRender": Array [],
+          "searchTerm": "",
+          "totalItems": 0,
+          "totalPages": 1,
+        },
+        "match": Object {
+          "params": Object {
+            "bucketlistId": 1,
+            "itemId": 1,
+            "itemName": "career",
+          },
+        },
+        "store": Object {
+          "dispatch": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+          Symbol(observable): [Function],
+        },
+        "storeSubscription": Subscription {
+          "listeners": Object {
+            "clear": [Function],
+            "get": [Function],
+            "notify": [Function],
+            "subscribe": [Function],
+          },
+          "onStateChange": [Function],
+          "parentSub": undefined,
+          "store": Object {
+            "dispatch": [Function],
+            "getState": [Function],
+            "replaceReducer": [Function],
+            "subscribe": [Function],
+            Symbol(observable): [Function],
+          },
+          "unsubscribe": [Function],
+        },
       },
       "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "handleLogout": undefined,
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "bucketlistName": "",
-            "currentLocation": "Items",
-            "handleSearch": [Function],
-            "itemForm": "/itemform/1",
-            "searchTerm": "",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "componentToRender": Array [],
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "pageButtons": Array [
-              <span
-                className="page_button"
-                onClick={[Function]}
->
-                1
-</span>,
-            ],
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-      ],
-      "type": "div",
+      "rendered": null,
+      "type": [Function],
     },
   ],
   Symbol(enzyme.__options__): Object {

@@ -1,5 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
+import store from '../store/Store';
 import ItemView from '../components/ItemView';
 
 describe('ItemView component', () => {
@@ -16,7 +17,7 @@ describe('ItemView component', () => {
   }
 
   const component = shallow(
-    <ItemView {...props} />
+    <ItemView {...props} store={store} />
   );
 
   it('should exist', () => {

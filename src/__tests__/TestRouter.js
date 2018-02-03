@@ -1,11 +1,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import App from '../containers/App';
+import Router from '../components/Router';
 
-describe('App component', () => {
+describe('Router component', () => {
 
   const component = shallow(
-    <App />
+    <Router />
   );
 
   it('should exist', () => {
