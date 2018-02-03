@@ -9,7 +9,6 @@ import ItemForm from '../components/ItemForm';
 import store from '../store/Store';
 
 const Router = () => {
-  // access protected routes: apparently localStorage does not accept BOOLEANS
   if (store.getState().authView.userHasAuthenticated === true) {
     return (
       <Switch>

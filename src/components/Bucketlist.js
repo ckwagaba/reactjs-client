@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import Button from './Button';
 import { BASEURL } from '../Config.js';
+import store from '../store/Store';
 
 const Bucketlist = (props) => {
   // redirect to bucketlist form
@@ -15,7 +16,7 @@ const Bucketlist = (props) => {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': localStorage.getItem('ACCESSTOKEN')
+        'Authorization': store.getState().authView.ACCESSTOKEN
       }
     })
     .then(response => {

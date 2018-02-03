@@ -4,6 +4,7 @@ import Nav from './Nav';
 import SubmitButton from './SubmitButton';
 import ServerResponse from './ServerResponse';
 import { BASEURL } from '../Config.js';
+import store from '../store/Store';
 
 class BucketlistForm extends Component {
   constructor(props) {
@@ -43,7 +44,7 @@ componentDidMount() {
       body: JSON.stringify(requestData),
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': localStorage.getItem('ACCESSTOKEN')
+        'Authorization': store.getState().authView.ACCESSTOKEN
       }
     })
     .then(response => {
