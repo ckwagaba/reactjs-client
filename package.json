@@ -18,9 +18,11 @@
     "enzyme-adapter-react-16": "^1.1.0",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
+    "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.17",
-    "react-test-renderer": "^16.1.1"
+    "react-test-renderer": "^16.1.1",
+    "redux": "^3.7.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -43,6 +45,7 @@
     "eslint-plugin-node": "^5.2.1",
     "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-standard": "^3.0.1",
+    "redux-devtools": "^3.4.1",
     "selenium-standalone": "^6.11.0",
     "wdio-mocha-framework": "^0.5.11",
     "webdriverio": "^4.9.10"
